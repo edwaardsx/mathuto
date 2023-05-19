@@ -19,6 +19,7 @@ import com.capstone.mathuto.databinding.ActivityLessonOneBinding
 import com.capstone.mathuto.timer.QuizTimer1
 import com.capstone.mathuto.watch.ModuleOne
 import java.util.*
+import android.view.MotionEvent
 
 class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
 
@@ -34,10 +35,10 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
         binding = ActivityLessonOneBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        tts = TextToSpeech(this, this)
-
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
+
+        tts = TextToSpeech(this, this)
 
         showObjectivesDialog()
 
@@ -139,4 +140,5 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
         tts.stop()
         tts.shutdown()
     }
+
 }

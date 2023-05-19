@@ -10,6 +10,7 @@ import com.capstone.mathuto.databinding.ActivityQuizResultBinding
 import com.capstone.mathuto.lessons.Lesson1
 import com.capstone.mathuto.questions.QuestionOne.CORRECT_ANS
 import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
+import com.capstone.mathuto.questions.QuestionOne.UNANSWERED_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.WRONG_ANS
 import com.capstone.mathuto.sqlite.Question
 import com.github.mikephil.charting.data.PieData
@@ -30,15 +31,18 @@ class QuizResult : AppCompatActivity() {
         val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS, 0)
         val correctAnswer = intent.getIntExtra(CORRECT_ANS, 0)
         val wrongAnswer = intent.getIntExtra(WRONG_ANS, 0)
+        val unansweredQuestion = intent.getIntExtra(UNANSWERED_QUESTIONS, 0)
 
         val entries = mutableListOf<PieEntry>()
         entries.add(PieEntry(correctAnswer.toFloat(), "Correct"))
         entries.add(PieEntry(wrongAnswer.toFloat(), "Wrong"))
+        entries.add(PieEntry(unansweredQuestion.toFloat(), "Unanswered"))
 
         val dataSet = PieDataSet(entries, "")
         val colors = mutableListOf<Int>()
         colors.add(Color.GREEN)
         colors.add(Color.RED)
+        colors.add(Color.YELLOW)
         dataSet.colors = colors
 
         val data = PieData(dataSet)
@@ -63,6 +67,9 @@ class QuizResult : AppCompatActivity() {
 
         binding.tvScoreWrong.text = "$wrongAnswer"
         binding.tvScoreWrong.setTextColor(Color.WHITE)
+
+        binding.tvUnansweredQuestion.text = "$unansweredQuestion"
+        binding.tvUnansweredQuestion.setTextColor(Color.WHITE)
 
         binding.totalNumberOfQuestions.text = "Total number of questions: $totalQuestions"
         binding.totalNumberOfQuestions.setTextColor(Color.WHITE)

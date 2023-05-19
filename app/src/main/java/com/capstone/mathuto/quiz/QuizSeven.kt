@@ -18,13 +18,14 @@ import com.capstone.mathuto.questions.QuestionOne.WRONG_ANS
 import com.capstone.mathuto.questions.QuestionSeven
 import com.capstone.mathuto.questions.QuestionSeven.CORRECT_ANS
 import com.capstone.mathuto.questions.QuestionSeven.TOTAL_QUESTIONS
+import com.capstone.mathuto.sqlite.Question
 
 class QuizSeven : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityQuizSevenBinding
 
     private var mCurrentPosition: Int = 1
-    private var mQuestionList: ArrayList<QuestionMultipleChoice>? = null
+    private var mQuestionList: ArrayList<Question>? = null
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
     private var mWrongAnswers: Int = 0
@@ -56,14 +57,14 @@ class QuizSeven : AppCompatActivity(), View.OnClickListener {
         } else {
             enableOptions()
         }
-        val question: QuestionMultipleChoice = mQuestionList!![mCurrentPosition - 1]
+        val question: Question = mQuestionList!![mCurrentPosition - 1]
         binding.progressBar.progress = mCurrentPosition
         binding.tvProgress.text = "$mCurrentPosition /${binding.progressBar.max}"
         binding.tvQuestion.text = question.question
-        binding.tvOptionOne.text = question.optionOne
-        binding.tvOptionTwo.text = question.optionTwo
-        binding.tvOptionThree.text = question.optionThree
-        binding.tvOptionFour.text = question.optionFour
+        binding.tvOptionOne.text = question.optionA
+        binding.tvOptionTwo.text = question.optionB
+        binding.tvOptionThree.text = question.optionC
+        binding.tvOptionFour.text = question.optionD
     }
 
     private fun disableOptions() {

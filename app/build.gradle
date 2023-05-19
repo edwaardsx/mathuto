@@ -54,4 +54,7 @@ dependencies {
     //text-to-speech
     implementation 'com.google.android.gms:play-services-mlkit-text-recognition:19.0.0'
 
+    //zoom image
+    implementation 'com.github.MikeOrtiz:TouchImageView:1.4.1'
+
 }

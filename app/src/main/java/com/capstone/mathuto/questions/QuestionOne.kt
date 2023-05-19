@@ -7,6 +7,7 @@ object QuestionOne {
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANS: String = "correct_answers"
     const val WRONG_ANS: String = "wrong_answers"
+    const val UNANSWERED_QUESTIONS: String = "unanswered_questions"
 
     fun getQuestions(): ArrayList<Question>{
 
@@ -122,7 +123,6 @@ object QuestionOne {
         )
         questionList.add(que10)
 
-        questionList.shuffle()
         return questionList
     }
 }

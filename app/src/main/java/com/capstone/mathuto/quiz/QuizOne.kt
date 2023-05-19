@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -17,6 +18,10 @@ import com.capstone.mathuto.questions.QuestionOne.CORRECT_ANS
 import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.WRONG_ANS
 import com.capstone.mathuto.sqlite.Question
+import java.util.*
+import kotlin.collections.ArrayList
+import android.os.CountDownTimer
+import com.capstone.mathuto.questions.QuestionOne.UNANSWERED_QUESTIONS
 
 @Suppress("DEPRECATION")
 class QuizOne : AppCompatActivity(), View.OnClickListener {
@@ -33,6 +38,11 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
     private val handler = Handler()
     private val delayDuration: Long = 2000
 
+    private var seCorrect: MediaPlayer? = null
+    private var seWrong: MediaPlayer? = null
+
+    private var remainingTime: Long = 30000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -44,14 +54,18 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         binding.tvOptionThree.setOnClickListener(this)
         binding.tvOptionFour.setOnClickListener(this)
 
-        mQuestionList = QuestionOne.getQuestions()
-        setQuestion()
+        seCorrect = MediaPlayer.create(this, R.raw.sound_effect_correct)
+        seWrong = MediaPlayer.create(this, R.raw.sound_effect_wrong)
 
+        mQuestionList = QuestionOne.getQuestions()
+        mQuestionList?.shuffle()
+        setQuestion()
     }
 
     @SuppressLint("SetTextI18n")
     private fun setQuestion() {
         defaultOptionView()
+        timer.start()
         if (!areOptionsEnabled) {
             disableOptions()
         } else {
@@ -59,7 +73,7 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         }
         val question: Question = mQuestionList!![mCurrentPosition - 1]
         binding.progressBar.progress = mCurrentPosition
-        binding.tvProgress.text = "$mCurrentPosition /${binding.progressBar.max}"
+        binding.tvProgress.text = "Question #$mCurrentPosition/${binding.progressBar.max}"
         binding.tvQuestion.text = question.question
         binding.tvOptionOne.text = question.optionA
         binding.tvOptionTwo.text = question.optionB
@@ -100,37 +114,39 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
             option.typeface = Typeface.DEFAULT
             option.background = ContextCompat.getDrawable(
                 this,
-                R.drawable.quiz_default_option_border_bg)
+                R.drawable.quiz_default_option_border_bg
+            )
         }
     }
 
-    private fun selectedOptionView(tv: TextView, selectedOptionNum: Int){
+    private fun selectedOptionView(tv: TextView, selectedOptionNum: Int) {
         defaultOptionView()
         mSelectedOptionPosition = selectedOptionNum
         tv.setTextColor(Color.parseColor("#363A43"))
         tv.setTypeface(tv.typeface, Typeface.BOLD)
         tv.background = ContextCompat.getDrawable(
             this,
-            R.drawable.quiz_default_option_border_bg)
+            R.drawable.quiz_default_option_border_bg
+        )
     }
 
     @SuppressLint("SetTextI18n")
     override fun onClick(view: View?) {
-        when(view?.id){
+        when (view?.id) {
             R.id.tv_option_one -> {
-                selectedOptionView(binding.tvOptionOne,1)
+                selectedOptionView(binding.tvOptionOne, 1)
                 processOptionSelected()
             }
             R.id.tv_option_two -> {
-                selectedOptionView(binding.tvOptionTwo,2)
+                selectedOptionView(binding.tvOptionTwo, 2)
                 processOptionSelected()
             }
             R.id.tv_option_three -> {
-                selectedOptionView(binding.tvOptionThree,3)
+                selectedOptionView(binding.tvOptionThree, 3)
                 processOptionSelected()
             }
             R.id.tv_option_four -> {
-                selectedOptionView(binding.tvOptionFour,4)
+                selectedOptionView(binding.tvOptionFour, 4)
                 processOptionSelected()
             }
         }
@@ -138,23 +154,25 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
 
     private fun processOptionSelected() {
         areOptionsEnabled = false
+        timer.cancel()
         disableOptions()
         val question = mQuestionList?.get(mCurrentPosition - 1)
         if (question!!.correctAnswer != mSelectedOptionPosition) {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
+            seWrong?.start()
         } else {
             mCorrectAnswers++
+            seCorrect?.start()
         }
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mQuestionList!!.size) {
             handler.postDelayed({
                 val intent = Intent(applicationContext, QuizResult::class.java)
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
-                intent.putExtra(WRONG_ANS,mQuestionList!!.size - mCorrectAnswers)
+                intent.putExtra(WRONG_ANS, mQuestionList!!.size - mCorrectAnswers)
+                intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList?.size)
-
-
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)
@@ -169,24 +187,50 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         mSelectedOptionPosition = 0
     }
 
-    private fun answerView(answer: Int, drawableView: Int){
-        when(answer){
-            1 ->{
+    private fun answerView(answer: Int, drawableView: Int) {
+        when (answer) {
+            1 -> {
                 binding.tvOptionOne.background = ContextCompat.getDrawable(
-                    this, drawableView)
+                    this, drawableView
+                )
             }
-            2 ->{
+            2 -> {
                 binding.tvOptionTwo.background = ContextCompat.getDrawable(
-                    this, drawableView)
+                    this, drawableView
+                )
             }
-            3 ->{
+            3 -> {
                 binding.tvOptionThree.background = ContextCompat.getDrawable(
-                    this, drawableView)
+                    this, drawableView
+                )
             }
-            4 ->{
+            4 -> {
                 binding.tvOptionFour.background = ContextCompat.getDrawable(
-                    this, drawableView)
+                    this, drawableView
+                )
             }
         }
     }
+
+    private val timer = object : CountDownTimer(remainingTime, 1000) {
+        @SuppressLint("SetTextI18n")
+        override fun onTick(millisUntilFinished: Long) {
+            remainingTime = millisUntilFinished
+            val seconds = millisUntilFinished / 1000
+            val minutes = seconds / 60
+            val remainingSeconds = seconds % 60
+            binding.tvTimer.text =
+                "Time Left: ${minutes}:${String.format("%02d", remainingSeconds)}"
+        }
+        override fun onFinish() {
+            mCurrentPosition++
+            areOptionsEnabled = true
+            setQuestion()
+            seWrong?.start()
+        }
+    }
 }
+
+
+
+

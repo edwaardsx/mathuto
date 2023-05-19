@@ -44,6 +44,7 @@ class QuizTwo : AppCompatActivity(), View.OnClickListener {
         binding.tvOptionFour.setOnClickListener(this)
 
         mQuestionList = QuestionTwo.getQuestions()
+        mQuestionList?.shuffle()
         setQuestion()
     }
 
