@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".lessons.Lesson14">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#F1F6F9">
+        <Button
+            android:id="@+id/btn_back"
+            android:background="@null"
+            android:drawableStart="@drawable/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="?attr/actionBarSize"
+            android:contentDescription="@string/back_button"/>
+        <TextView
+            android:text="Lesson 14"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Quarter 1 – Module 14:\nDividing Decimals/Mixed Decimals"
+                            android:textSize="16sp"
+                            android:paddingHorizontal="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"/>
+                        <Button
+                            android:id="@+id/btn_tts"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_lessons_description_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="10dp"
+                        android:text="Good day! In your previous lessons you have explored how operations like addition and subtraction are done in decimals.\n\nIn this module, you will learn how to divide decimals. Just as there is a correct way to divide whole numbers, there is also a correct way to divide decimals." />
+                    <TextView
+                        android:text="Example:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_mod14"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_mod141"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="#ffffff"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="300dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:text="Tutorial"
+                                android:textSize="18sp"
+                                android:paddingHorizontal="10dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:padding="10dp"
+                                android:text="Are you struggling with the numbers mixing in your head? In this tutorial, we will guide you through the step-by-step process of this lesson!"
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                            <Button
+                                android:id="@+id/btn_watch_tutorial"
+                                android:text="Watch Tutorial"
+                                android:textColor="@color/black"
+                                android:background="@drawable/btn_secondary_button"
+                                android:drawablePadding="10dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingHorizontal="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_width="300dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:background="@drawable/bg_gradient_quiz"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:text="Quizzes"
+                                android:textSize="18sp"
+                                android:paddingHorizontal="10dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:padding="10dp"
+                                android:text="Now let's measure your problem-solving skills with the quiz composed of true or false and multiple-choice questions to assess your level of understanding."
+                                android:textColor="#F3F3F3"
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                            <Button
+                                android:id="@+id/btn_start_quiz"
+                                android:text="Start Quiz!"
+                                android:textColor="@color/white"
+                                android:background="@drawable/btn_primary_button"
+                                android:drawablePadding="10dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingHorizontal="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

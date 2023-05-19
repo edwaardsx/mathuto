@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">mathuto</string>
+    <string name="back_button">back button</string>
+
+    //Main Tutorials
+    <string name="watch">Watch Video Tutorial</string>
+
+    //Main Quizzes
+    <string name="lesson_one_title">Addition and Subtraction of Fractions</string>
+    <string name="lesson_two_title">Problem Solving Involving Addition and Subtraction of Fractions</string>
+    <string name="lesson_three_title">Multiplication of Simple Fractions and Mixed Fractions</string>
+    <string name="lesson_four_title">Problem Solving on Multiplication of Fractions</string>
+    <string name="lesson_five_title">Dividing Simple Fractions and Mixed Fractions</string>
+    <string name="lesson_six_title">Solving Routine or Non-Routine Problems Involving Division Without or With Any of the Other Operations of Fractions and Mixed Fractions</string>
+    <string name="lesson_seven_title">Addition and Subtraction of Decimals</string>
+    <string name="lesson_eight_title">Solving Routine or Non-Routine Problems Involving Addition and Subtraction of Decimals and Mixed Decimals Using Appropriate Problem Solving Strategies and Tools</string>
+    <string name="lesson_nine_title">Multiplication of Decimals and Mixed Decimals</string>
+    <string name="lesson_ten_title">Multiplication of Decimals and Mixed Decimals Mentally by 0.1, 0.01, 10 and 100</string>
+    <string name="lesson_eleven_title">Problem-Solving on Multiplication of Decimals</string>
+    <string name="lesson_twelve_title">Multi-Step Problems Involving Multiplication and Addition or Subtraction of Decimals</string>
+    <string name="lesson_thirteen_title">Dividing Whole Numbers by Decimals Up 2 Decimal Places</string>
+    <string name="lesson_fourteen_title">Dividing Decimals/Mixed Decimals</string>
+    <string name="lesson_fifteen_title">Dividing Decimals Up to 4 Decimal Places by 0.1, 0.01 and 0.001</string>
+    <string name="lesson_sixteen_title">Dividing Decimals Up to 2 Decimal Places by 10, 100 and 1000 Mentally</string>
+    <string name="lesson_seventeen_title">Differentiating Repeating from Terminating and Non-Terminating Decimal Quotient</string>
+    <string name="lesson_eighteen_title">Solving Word Problems Involving Division of Decimals</string>
+    <string name="lesson_nineteen_title">Solving Multi-Step Problems Involving Division of Decimals and Any of the Other Operations</string>
+
+    <string name="lesson_one">Lesson 1</string>
+    <string name="lesson_two">Lesson 2</string>
+    <string name="lesson_three">Lesson 3</string>
+    <string name="lesson_four">Lesson 4</string>
+    <string name="lesson_five">Lesson 5</string>
+    <string name="lesson_six">Lesson 6</string>
+    <string name="lesson_seven">Lesson 7</string>
+    <string name="lesson_eight">Lesson 8</string>
+    <string name="lesson_nine">Lesson 9</string>
+    <string name="lesson_ten">Lesson 10</string>
+    <string name="lesson_eleven">Lesson 11</string>
+    <string name="lesson_twelve">Lesson 12</string>
+    <string name="lesson_thirteen">Lesson 13</string>
+    <string name="lesson_fourteen">Lesson 14</string>
+    <string name="lesson_fifteen">Lesson 15</string>
+    <string name="lesson_sixteen">Lesson 16</string>
+    <string name="lesson_seventeen">Lesson 17</string>
+    <string name="lesson_eighteen">Lesson 18</string>
+    <string name="lesson_nineteen">Lesson 19</string>
+
+
+    <string name="objectives_one">The module covers the addition and subtraction of simple fractions and mixed numbers without or with regrouping.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Add and subtract simple fractions without or with re-grouping;\n<b>◙</b> Add and subtract mixed numbers without or with re-grouping;</string>
+    <string name="objectives_two">The module covers the problem-solving involving addition and subtraction of fractions.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Solve routine and non-routine problems involving addition\n<b>◙</b> Subtraction of fractions using appropriate problem-solving strategies and tools.</string>
+    <string name="objectives_three">In this module, you will again encounter Mathematics problems involving fractions. You may use your stored knowledge in order to answer the activities in store for you. Consequently, this module will develop your problem-solving and analytical skills. Are you excited to learn more and test your capacity in solving problems involving fractions? This module is for you.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Multiply simple fractions and mixed fractions\n<b>◙</b> Multiply simple fractions by whole numbers\n<b>◙</b> Multiply fraction by another fraction</string>
+    <string name="objectives_four">The module is all about Problem Solving Involving Multiplication of Fractions.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Solve routine and non-routine problems involving multiplication without or with addition or subtraction of fractions\n<b>◙</b> Mixed fractions using appropriate problem-solving strategies and tools.</string>
+    <string name="objectives_five">This module is designed and written for grade 6 learners. It is also intended to reinforce, enrich, and enhance the mathematical skills of learners on how to divide the simple fractions and mixed numbers.\n\nModified Essential Learning Competencies:\n\n<b>◙</b> Divides simple fractions and mixed fractions.</string>
+    <string name="objectives_six">The scope of this module permits it to be used in many different learning situations. The language used recognizes the diverse vocabulary level of students. The lessons are arranged to follow the standard sequence of the course.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Solve routine or non-routine problems involving division without or with any of the other operations of fractions\n<b>◙</b> Mixed fractions using appropriate problem-solving strategies and tools</string>
+    <string name="objectives_seven">In this module, you will realize how important it is to learn basic operations particularly addition and subtraction and their applications in our daily lives.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Add and subtract decimals and mixed decimals through ten thousandths without or with regrouping</string>
+    <string name="objectives_eight">This module was designed and written with you in mind. It is here to help you master the Addition and Subtraction of Decimals. The scope of this module permits it to be used in many different learning situations.\n\nGoing through this module, you are expected to:\n\n<b>◙</b> Add and/or subtract decimals and mixed decimals through ten thousandths without or with re-grouping</string>
+    <string name="objectives_nine">This module was designed and written with you in mind. It is here to help you master the Multiplication of Decimals and Mixed Decimals. The scope of this module permits it to be used in many different learning situations.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Multiply decimals and mixed decimals with factors up to 2 decimal places</string>
+    <string name="objectives_ten">The module focused on:\n\nMultiplication of Decimals and Mixed Decimals Mentally By 0.1, 0.01, 10 and 100\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Multiply decimals and mixed decimals mentally by 0.1, 0.01, 10 and 100</string>
+    <string name="objectives_eleven">The module focused on:\n\nProblem-solving on Multiplication of Decimals and Mixed Decimals\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Solve non-routine and routine problems involving multiplication of decimals\n<b>◙</b> Mixed decimals including money using appropriate problem-solving strategies</string>
+    <string name="objectives_twelve">The lessons are arranged to follow the standard sequence of the course. But the order in which you read them can be changed to correspond with the textbook you are now using.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Solve multi-step problems involving multiplication and addition or subtraction of decimals, mixed decimals and whole numbers including money.</string>
+    <string name="objectives_thirteen">This module was designed and written with you in mind. It is here to help you master the Division of Whole Numbers by Decimals Up to 2 Decimal Places.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Divide whole numbers by decimals up to 2 decimal places and vice versa</string>
+    <string name="objectives_fourteen">The module covers the division of decimals/mixed decimals.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Divide decimals/mixed decimals up to 2 decimal places</string>
+    <string name="objectives_fifteen">This module was designed and written with you in mind. It is here to help you master the Division of Decimals Up to 4 Decimal Places by 0.1, 0.01 and 0.001.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Divide decimals up to 4 decimal places by 0.1, 0.01, and 0.001</string>
+    <string name="objectives_sixteen">This module was designed and written with you in mind. It is here to help you master the division of decimals up to 2 decimal places by 10, 100 and 1000 mentally.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Divide decimals up to 2 decimal places by 10, 100 and 1000 mentally.</string>
+    <string name="objectives_seventeen">This module was designed and written with you in mind. It is here to help you identify the different types of decimal quotient whether they are Repeating, Terminating or Non-Terminating Decimals.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Change fractions to decimals\n<b>◙</b> Divide whole numbers and decimals\n<b>◙</b> Differentiate Repeating from Terminating and Non-Terminating Decimal Quotient.</string>
+    <string name="objectives_eighteen">This module was designed and written with you in mind. It is here to help you master the Module 18: Solving Word Problems Involving Division of Decimals.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Solve routine word problems; and\n<b>◙</b> Solve non-routine word problems</string>
+    <string name="objectives_nineteen">This module was designed and written with you in mind. It is here to help you develop skills in solving multi-step problems involving division of decimals and any of the other operations.\n\nAfter going through this module, you are expected to:\n\n<b>◙</b> Solve multi-step routine and non-routine problems involving division and\n<b>◙</b> Any of the other operations of decimals, mixed decimals and whole numbers including money using appropriate problem-solving strategies and tools</string>
+    <string name="about_description">With the aid of the Mathuto: Mobile learning application, in ampid 1 elementary school students and teachers will be able to teach and learn while interacting through mobile learning. Authorized users will have access to updated, secure, and easily accessible student records and can create reliable reports in addition to adding, editing, and deleting information. A contact module, student profiles, schedules, and accounts are just a few of the features offered by the system. The user also encounters an interactive experience that augments the real world with information generated by mobile devices. Ampid 1 Elementary School and the Technological Institute of the Philippines (TIP-QC) collaborated to create the application.</string>
+
+
+    <string name="lesson_one_description"><b>Description:</b> Addition and Subtraction of Fractions involves performing mathematical operations to add or subtract fractions.</string>
+
+</resources>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mathuto"
+        tools:targetApi="31">
+        <activity
+            android:name=".QuizResultSummaryActivity"
+            android:exported="false" />
+
+        <service
+            android:name="android.speech.tts.TextToSpeechService"
+            android:exported="false"
+            android:permission="android.permission.BIND_TTS">
+            <intent-filter>
+                <action android:name="android.intent.action.TTS_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".watch.ModuleNineteen"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleEighteen"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleSeventeen"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleSixteen"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleFifteen"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleFourteen"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleThirteen"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleTwelve"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleEleven"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleTen"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleNine"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleEight"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleSeven"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleSix"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleFive"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleFour"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleThree"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleTwo"
+            android:exported="false" />
+        <activity
+            android:name=".watch.ModuleOne"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizOne"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizTwo"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizThree"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizFour"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizFive"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizSeven"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizEight"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizNine"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizTen"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizEleven"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizTwelve"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizThirteen"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizFourteen"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizFifteen"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizSixteen"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizSeventeen"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizEighteen"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizNineteen"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer1"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer2"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer3"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer4"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer5"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer6"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer7"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer8"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer9"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer10"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer11"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer12"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer13"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer14"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer15"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer16"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer17"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer18"
+            android:exported="false" />
+        <activity
+            android:name=".timer.QuizTimer19"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson1"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson2"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson3"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson4"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson5"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson6"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson7"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson8"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson9"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson10"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson11"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson12"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson13"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson14"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson15"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson16"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson17"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson18"
+            android:exported="false" />
+        <activity
+            android:name=".lessons.Lesson19"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult"
+            android:exported="false" />
+        <activity
+            android:name=".menu.IntroductoryMessage"
+            android:exported="false" />
+        <activity
+            android:name=".menu.TableOfContents"
+            android:exported="false" />
+        <activity
+            android:name=".menu.DevelopmentTeam"
+            android:exported="false" />
+        <activity
+            android:name=".About"
+            android:exported="false" />
+        <activity
+            android:name=".Main"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
