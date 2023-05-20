@@ -2,10 +2,11 @@ package com.capstone.mathuto.sqlite
 
 data class Question(
     val id: Int,
-    val question: String,
-    val optionA: String,
-    val optionB: String,
-    val optionC: String,
-    val optionD: String,
-    val correctAnswer: Int
+    var question: String,
+    var optionA: String,
+    var optionB: String,
+    var optionC: String,
+    var optionD: String,
+    val correctAnswer: Int,
+    val selectedAnswer: Int
 )

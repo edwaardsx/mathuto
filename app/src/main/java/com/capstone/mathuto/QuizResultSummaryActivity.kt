@@ -32,7 +32,7 @@ class QuizResultSummaryActivity : AppCompatActivity() {
         mQuestionList?.shuffle()
         setQuestion()
 
-        binding.btnNext.setOnClickListener{
+        binding.btnNext.setOnClickListener {
             if (!isBackButtonVisible) {
                 binding.btnBackPreviousQuestion.visibility = View.VISIBLE
                 isBackButtonVisible = true
@@ -47,7 +47,7 @@ class QuizResultSummaryActivity : AppCompatActivity() {
                 overridePendingTransition(0, 0)
             }
         }
-        binding.btnBackPreviousQuestion.setOnClickListener{
+        binding.btnBackPreviousQuestion.setOnClickListener {
             if (mCurrentPosition > 1) {
                 mCurrentPosition--
                 setQuestion()
@@ -79,7 +79,8 @@ class QuizResultSummaryActivity : AppCompatActivity() {
             option.typeface = Typeface.DEFAULT
             option.background = ContextCompat.getDrawable(
                 this,
-                R.drawable.quiz_default_option_border_bg)
+                R.drawable.quiz_default_option_border_bg
+            )
         }
     }
 
@@ -94,6 +95,34 @@ class QuizResultSummaryActivity : AppCompatActivity() {
             binding.tvOptionTwo.text = question.optionB
             binding.tvOptionThree.text = question.optionC
             binding.tvOptionFour.text = question.optionD
+
+            if (question.correctAnswer == question.selectedAnswer) {
+                answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
+            } else {
+                answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
+                answerView(question.selectedAnswer, R.drawable.quiz_wrong_option_border_bg)
+            }
+        }
+    }
+
+    private fun answerView(answer: Int, drawableView: Int) {
+        when (answer) {
+            1 -> {
+                binding.tvOptionOne.background = ContextCompat.getDrawable(
+                    this, drawableView)
+            }
+            2 -> {
+                binding.tvOptionTwo.background = ContextCompat.getDrawable(
+                    this, drawableView)
+            }
+            3 -> {
+                binding.tvOptionThree.background = ContextCompat.getDrawable(
+                    this, drawableView)
+            }
+            4 -> {
+                binding.tvOptionFour.background = ContextCompat.getDrawable(
+                    this, drawableView)
+            }
         }
     }
 }

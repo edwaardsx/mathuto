@@ -1,52 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="16dp"
-    app:cardBackgroundColor="#ffffff"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <RelativeLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/ic_objectives"
-                    android:layout_centerHorizontal="true"
-                    android:padding="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="#283593"/>
+
                 <ImageButton
                     android:id="@+id/btn_objectives_close"
-                    android:layout_alignParentEnd="true"
-                    android:layout_margin="5dp"
-                    android:background="@null"
-                    android:src="@drawable/ic_close"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:contentDescription="button_close"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@null"
+                    android:contentDescription="button_close"
+                    android:src="@drawable/ic_close" />
             </RelativeLayout>
-        <TextView
-            android:fontFamily="@font/poppins_bold"
-            android:text="Objectives"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:fontFamily="@font/poppins_regular"
-            android:padding="16dp"
-            android:text="@string/objectives_two"
-            android:textSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:background="@drawable/dialog_bg_stroke"
+                android:padding="15dp"
+                android:layout_marginTop="-75dp"
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="150dp">
+                <View
+                    android:background="@drawable/dialog_bg_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+                <ImageView
+                    android:src="@drawable/ic_objectives"
+                    android:padding="15dp"
+                    android:adjustViewBounds="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+            <TextView
+                android:text="Objectives"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="The module covers the problem-solving involving addition and subtraction of fractions.\n\nAfter going through this module, you are expected to:"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="16dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="✦"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Solve routine and non-routine problems involving addition"
+                    android:paddingHorizontal="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="✦"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Subtraction of fractions using appropriate problem-solving strategies and tools."
+                    android:paddingHorizontal="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

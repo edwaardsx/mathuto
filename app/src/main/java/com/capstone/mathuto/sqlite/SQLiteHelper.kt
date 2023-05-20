@@ -75,7 +75,7 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
                 val optionD = cursor.getString(cursor.getColumnIndex(COLUMN_OPTION_D))
                 val correctAnswer = cursor.getInt(cursor.getColumnIndex(COLUMN_ANSWER))
 
-                val questionObject = Question(id, question, optionA, optionB, optionC, optionD, correctAnswer)
+                val questionObject = Question(id, question, optionA, optionB, optionC, optionD, correctAnswer,0)
                 questionsList.add(questionObject)
             } while (cursor.moveToNext())
         }

@@ -61,7 +61,6 @@ class QuizResult : AppCompatActivity() {
                 return value.toInt().toString()
             }
         })
-
         binding.pieChart.data = data
         binding.pieChart.description.isEnabled = false
         binding.pieChart.setEntryLabelTextSize(12f)
@@ -78,13 +77,10 @@ class QuizResult : AppCompatActivity() {
 
         binding.tvScoreCorrect.text = "$correctAnswer"
         binding.tvScoreCorrect.setTextColor(Color.WHITE)
-
         binding.tvScoreWrong.text = "$wrongAnswer"
         binding.tvScoreWrong.setTextColor(Color.WHITE)
-
         binding.tvUnansweredQuestion.text = "$unansweredQuestion"
         binding.tvUnansweredQuestion.setTextColor(Color.WHITE)
-
         binding.totalNumberOfQuestions.text = "Total number of questions: $totalQuestions"
         binding.totalNumberOfQuestions.setTextColor(Color.WHITE)
 

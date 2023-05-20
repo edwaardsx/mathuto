@@ -35,6 +35,7 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
     private var mWrongAnswers: Int = 0
     private var mUnansweredQuestion: Int = 0
     private var areOptionsEnabled = true
+    private var mQuestion = mQuestionList
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
@@ -187,6 +188,7 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         timer.cancel()
         disableOptions()
         val question = mQuestionList?.get(mCurrentPosition - 1)
+        val selectedOption = mSelectedOptionPosition
         if (question!!.correctAnswer != mSelectedOptionPosition) {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
@@ -204,7 +206,6 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
                 intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
-
 
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)

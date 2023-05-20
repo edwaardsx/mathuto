@@ -20,7 +20,8 @@ object QuestionOne {
             "Simular Fraction",
             "LCD",
             "Similar",
-            1
+            1,
+            0
         )
         questionList.add(question1)
 
@@ -31,7 +32,8 @@ object QuestionOne {
             "Simular Fraction",
             "LCD",
             "Similar",
-            2
+            2,
+            0
         )
         questionList.add(question2)
 
@@ -42,7 +44,8 @@ object QuestionOne {
             "Mixed Fraction",
             "Dissimilar Fraction",
             "Similar",
-            3
+            3,
+            0
         )
         questionList.add(question3)
 
@@ -53,7 +56,8 @@ object QuestionOne {
             "Mixed Fractions",
             "GFC",
             "Similar",
-            2
+            2,
+            0
         )
         questionList.add(question4)
 
@@ -64,7 +68,8 @@ object QuestionOne {
             "Simular Fraction",
             "LCD",
             "Similar",
-            3
+            3,
+            0
         )
         questionList.add(question5)
 
@@ -75,7 +80,8 @@ object QuestionOne {
             "Mixed Fractions",
             "GFC",
             "Similar",
-            3
+            3,
+            0
         )
         questionList.add(question6)
 
@@ -86,7 +92,8 @@ object QuestionOne {
             "Similar",
             "Dissimilar",
             "Mixed Fractions",
-            1
+            1,
+            0
         )
         questionList.add(question7)
 
@@ -97,7 +104,8 @@ object QuestionOne {
             "1/4",
             "2/4",
             "4/3",
-            1
+            1,
+            0
         )
         questionList.add(question8)
 
@@ -108,7 +116,8 @@ object QuestionOne {
             "Similar",
             "Mixed",
             "LCD",
-            2
+            2,
+            0
         )
         questionList.add(question9)
 
@@ -119,7 +128,8 @@ object QuestionOne {
             "Similar",
             "Mixed",
             "GCF",
-            1
+            1,
+            0
         )
         questionList.add(question10)
 
