@@ -92,19 +92,256 @@
                         android:padding="10dp"
                         android:text="Knowing about something is really important. Although it takes a lot of patience in applying some ways and means to find it but seeing the result is amazing. In dividing simple fractions and mixed fractions you will discover that even a little portion of an object can be measured and has value. The processes involve in solving the problems related to it will be discussed to you later. Further, the application of what you have learned is expected to be mastered in order to move on to the next level of learning." />
 
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What’s In"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_what_in"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
                     <TextView
-                        android:text="Example:"
+                        android:layout_marginTop="10dp"
+                        android:text="Do you know how to multiply fractions? Let us try to find out if you can do it by answering the problem and showing your solutions in the indicated ways or methods below."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Mrs. Consebit received eight trays of bread as a gift from her friends. If each tray of bread has 3/4 donuts, how many donuts are there in all?"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_05"/>
+                    <TextView
+                        android:id="@+id/tv_whats_it_is"
+                        android:layout_marginTop="10dp"
+                        android:text="A. Draw a diagram on your activity notebook to illustrate the fractional part of donuts based on the problem.\n\nB. Solve the problem. Write the answer on your activity notebook."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What’s new"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_what_new"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Our previous lessons in fractions were very challenging, but you did your best kid. To increase your knowledge and skills in mathematics, I will show you another problem and we are going to find out how to answer this together. Are you ready?\n\nAn 8 meter piece of wood is cut equally into shorter pieces of 1 meter each.\n\nHow many shorter pieces will there be?"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Illustration:"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/poppins_semi_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-                    <ImageView
+
+                    <com.ortiz.touchview.TouchImageView
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
                         android:contentDescription="example"
-                        android:src="@drawable/smple_mod5"/>
+                        android:src="@drawable/smple_051"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Based on the model, we can say that 1/5 fits into 8/10 four times.\n\nTherefore, we can write the division equation as 8/10 ÷ 1/5 = 4\n\nHence, there are four pieces of 1/5 meter of wood in 8/10."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What is It"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_what_is_it"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Learning to solve the different mathematical problems in fraction is very interesting. Have you experienced being given a slice of watermelon and still have to share a part of that slice to someone? Dividing fractions need to follow some steps in order to solve it. It can be a little tricky and confusing, but it is really simple. This time I will be presenting to you the following processes on how to divide simple fractions and mixed fractions. Read and observe very carefully our discussion."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Reciprocals"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="If the product of two numbers is 1, then they are reciprocals or multiplicative inverse of each other. To find the reciprocal of a fraction, interchange the numerator and the denominator.\n\nLet us take 2/3. The reciprocal of 2/3 is 3/2. Multiplying the number and its reciprocal, we have 2/3 x 3/2 = 6/6 = 1. So, 2/3 and 3/2 are reciprocals or the multiplicative inverse of each other."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_055"/>
+                    <TextView
+                        android:text="Dividing Fractions"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="To divide fractions, rewrite the division as a related multiplication in which you multiply the dividend by the reciprocal of the divisor."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_054"/>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

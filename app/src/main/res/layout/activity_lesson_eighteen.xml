@@ -99,35 +99,212 @@
                         android:fontFamily="@font/poppins_semi_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-                    <ImageView
+                    <com.ortiz.touchview.TouchImageView
                         android:layout_width="match_parent"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
                         android:contentDescription="example"
-                        android:src="@drawable/smple_18" />
-                    <ImageView
+                        android:src="@drawable/smple_0180"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="example"
-                    android:src="@drawable/smple_mod182" />
-                    <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="example"
-                    android:src="@drawable/smple_mod182"/>
-                    <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="example"
-                    android:src="@drawable/smple_mod183" />
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What’s In"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_whats_in"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
 
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Can you still remember how to divide a whole number with a decimal and mixed decimal? How do we divide decimals by 10, 100 or 1 000? How will we know that the quotient is a terminating or non-terminating?"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What’s New"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_whats_new"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Are you excited with our new lesson? I hope you will enjoy the different activities especially prepared for you. This time, we will be learning on how to solve routine and non-routine word problem involving division of decimals, mixed decimals, and whole numbers including money by using appropriate problem solving strategies and tools. Are you ready? Let’s start\n\nI know you love to solve problems and I’m sure our topic for today will help you find problem solving easy. Let’s get it on and let’s explore!\n\nNow, let us be guided by the different steps in problem solving. Remember the acronym U P E R, where U stands for Understand, P for Plan, E for Execute and R for Review."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Steps in Problem Solving:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Understand:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="This is the first and the most important thing to do to go deeper into the problem. In this stage, you need to read and re-read the word problem and find out for yourself of what is really the problem since you cannot solve a problem which you do not know exactly what to solve. In this stage, no pen or paper is needed.\n\nJust bear in mind that you have to know the following:\n\n• What is asked?\n\n• What are the given facts?"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Plan:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="After understanding, you have to plan and make a course of action! You can choose a problem-solving strategy or a combination of two strategies. Here are some of suggested strategies:\n\n• draw a picture or diagram\n\n• make an organized list\n\n• make a table\n\n• solve a simpler related problem\n\n• find a pattern\n\n• guess and check\n\n• act out a problem\n\n• work backward\n\n• write an equation\n\n• use manipulatives\n\n• break it into parts"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Execute:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Since you already have a plan on how to find the answer to the problem, it is time for you to do the solving. Remember, your plan is flexible. You can change the strategy or strategies when it is deemed necessary."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Review:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="This is the last process and you need to be very careful because it is of equal importance as with three first steps. Math wizards always look back and check their works. Go back to the problem and carefully check the processes you have gone through. Check if:\n\n• your answer sensible or practical\n\n• your estimation is applicable to check whether your answer is reasonable\n\n• you did not get the answer correctly, go back and check the process carefully to find where you have gone wrong."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Keywords to remember in Division!!!!"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="per, a, out of, ratio of, quotient of, percent (divide by 100) equal pieces, split, average, separate, each"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Example:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_0182"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"

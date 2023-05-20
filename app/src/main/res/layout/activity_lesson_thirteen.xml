@@ -97,27 +97,86 @@
                         android:fontFamily="@font/poppins_semi_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-                    <ImageView
+                    <com.ortiz.touchview.TouchImageView
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
                         android:contentDescription="example"
-                        android:src="@drawable/smple_mod13"/>
-
-                    <ImageView
+                        android:src="@drawable/smple_0130"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginBottom="16dp"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:layout_gravity="center"
-                        android:contentDescription="example"
-                        android:src="@drawable/smple_mod131"/>
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:src="@drawable/ic_whats_in"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"/>
+                                <TextView
+                                    android:text="What’s New"
+                                    android:textSize="18sp"
+                                    android:gravity="center_vertical"
+                                    android:paddingHorizontal="10dp"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/poppins_semi_bold"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"/>
+                                <Button
+                                    android:id="@+id/btn_tts_what_new"
+                                    android:text="Read"
+                                    android:textAlignment="textStart"
+                                    android:background="@drawable/btn_secondary_button"
+                                    android:drawableStart="@drawable/ic_mic_secondary"
+                                    android:drawablePadding="10dp"
+                                    android:paddingHorizontal="10dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_gravity="center"
-                        android:contentDescription="example"
-                        android:src="@drawable/smple_mod132"/>
-
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:background="@color/light_gray"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:text="Division of whole numbers by decimals is quite a challenging task but if you immerse yourself in the process, you will surely find it exciting. This time, you will explore a new activity. Study the illustration provided and find out in the process how to divide whole numbers by decimals."
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                            <com.ortiz.touchview.TouchImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="250dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="example"
+                                android:src="@drawable/smple_0131"/>
+                            <TextView
+                                android:text="Example:"
+                                android:padding="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <com.ortiz.touchview.TouchImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="250dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="example"
+                                android:src="@drawable/smple_0132"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

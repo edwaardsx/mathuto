@@ -21,6 +21,7 @@ import com.capstone.mathuto.sqlite.Question
 import java.util.*
 import kotlin.collections.ArrayList
 import android.os.CountDownTimer
+import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
 
 @Suppress("DEPRECATION")
 class QuizOne : AppCompatActivity(), View.OnClickListener {
@@ -37,7 +38,6 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
-
     private var remainingTime: Long = 30000
 
     private var seCorrect: MediaPlayer? = null
@@ -201,9 +201,11 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(applicationContext, QuizResult::class.java)
                 seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
+                intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
                 intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
-                //intent.putExtra(TOTAL_QUESTIONS, mQuestionList?.size)
+
+
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)

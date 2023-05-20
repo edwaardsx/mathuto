@@ -1,5 +1,6 @@
 package com.capstone.mathuto.quiz
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -12,7 +13,6 @@ import com.capstone.mathuto.questions.QuestionOne.CORRECT_ANS
 import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.UNANSWERED_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.WRONG_ANS
-import com.capstone.mathuto.sqlite.Question
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
@@ -23,6 +23,7 @@ class QuizResult : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuizResultBinding
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -84,8 +85,8 @@ class QuizResult : AppCompatActivity() {
         binding.tvUnansweredQuestion.text = "$unansweredQuestion"
         binding.tvUnansweredQuestion.setTextColor(Color.WHITE)
 
-        //binding.totalNumberOfQuestions.text = "Total number of questions: $totalQuestions"
-        //binding.totalNumberOfQuestions.setTextColor(Color.WHITE)
+        binding.totalNumberOfQuestions.text = "Total number of questions: $totalQuestions"
+        binding.totalNumberOfQuestions.setTextColor(Color.WHITE)
 
         binding.btnBack.setOnClickListener{
             val intent = Intent(applicationContext,  Lesson1::class.java)

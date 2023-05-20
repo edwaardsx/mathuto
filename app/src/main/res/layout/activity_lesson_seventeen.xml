@@ -98,16 +98,234 @@
                         android:fontFamily="@font/poppins_semi_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-                    <ImageView
+                    <com.ortiz.touchview.TouchImageView
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_gravity="center"
                         android:contentDescription="example"
-                        android:src="@drawable/smple_mod17" />
+                        android:src="@drawable/smple_mod17"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What’s In"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_whats_in"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Hello! How did you find your past lessons about fractions? Fractions are of different types, right? Can you still identify them?"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Activity 1 – Fraction!"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Directions: Write down the following fractions to where they belong. Do this in your activity notebook."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_0170"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="So, were you able to identify them? Remember that Proper Fractions are fractions whose numerators are lesser than the denominator while Improper Fractions are fractions whose numerators are greater than the denominator. A Mixed Fraction on the other hand is made up of a whole number and a fraction."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What is It"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_what_is_it"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
 
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="I’m sure by now, you already mastered the conversion of fractions to decimals. Now, try to go back and to look at how you arrived at your answers. To change fractions to decimals, you do the division process, right? Notice that in some of the division process, you were able to solve it immediately because you end up with a zero remainder.\n\nFor some, you have to continue dividing because you arrived at different remainders and others gives you the same remainders as you continue the division process. Sounds confusing? To make a better understanding of it, let’s study first the following words:"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="1. repeat - to do, say or write the same thing again and again\n\n2. terminate - ends completely or immediately\n\n3. non-terminating - without end\n\nThis time, take a look at the following decimals.\n\n0.333\n\n0.428571…\n\n0.5"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="The first decimal number is a repeating decimal. Can you give me the reason why it is called a repeating decimal? You are correct when you say that the digit is repeated. The digit that is repeated in a repeating decimal is called repetend. In the example given, 3 is the repetend."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Example:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_0171"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="The second decimal number is an example of a non-terminating decimal. When you divide a number and you get different remainders, the result is a non-terminating decimal quotient."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Example:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_0172"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="The third decimal number obviously is an example of a terminating decimal. The digit immediately ends at 5. You get a terminating decimal when you divide a number which will give you a remainder of 0."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Example:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_0173"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="You will come across these three decimals when changing fractions to decimals or when dividing numbers whose quotient is a decimal number.Decimal quotients could either be a Repeating Decimal, Terminating Decimal or a Non-terminating Decimal."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Example:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_0174"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"

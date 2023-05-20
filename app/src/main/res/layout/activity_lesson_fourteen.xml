@@ -98,22 +98,238 @@
                         android:fontFamily="@font/poppins_semi_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_gravity="center"
-                        android:contentDescription="example"
-                        android:src="@drawable/smple_mod14"/>
-                    <ImageView
+                    <com.ortiz.touchview.TouchImageView
                         android:layout_width="match_parent"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
                         android:contentDescription="example"
                         android:src="@drawable/smple_mod141"/>
-
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What’s New"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_whats_new"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
 
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="On the onset of the lesson, you already have exercised skills needed as you go along with this lesson. Now, we are about explore more things needed and are imperative for you to proceed to higher skills you needed to master. What do you think happens when we divide a decimal by another decimal?\n\nTo know the answer, here’s an example to further explain it. Just follow the steps in dividing decimals mentioned below.\n\nSelena wants to surprise her mother with a dress for Mother’s Day. The dress cost P539.65. So, she decides to save P 125.50 a week. How many weeks do you think she needs to save an amount that is enough to buy the dress?\n\nTo solve this problem, you need to divide P539.65 by her savings of P 125.50 weekly."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_0140"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="The following are the steps in dividing decimals\n\nStep 1.\nChange the divisor into a whole number by moving the decimal point to one or more places to the right.\n\nStep 2.\nMove the decimal point of the dividend the same number of places as the divisor.\n\nStep 3.\nDivide the dividend by the divisor just the way you divide whole numbers.\n\nStep 4.\nWrite the decimal point of the quotient directly above the decimal point in the dividend."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What is It"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_what_is_it"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="The decimal point allows you to write whole numbers and numbers with a fractional component using a consistent notation. This makes it more meaningful especially when you will be needing it to solve and seek solutions for certain concerns that you might want to address.\n\nOn a lighter sense, making operations such as addition, subtraction, multiplication, and division, which are easier and simpler.\n\nNow, to further explain it, here are another examples."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Example:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="What is the quotient of 23.64 and 0.04?\n\nTo divide the decimals, follow the steps\n\nStep 1 Move the decimal point of the divisor two places to the right to make a whole number divisor.\n\nStep 2 Move the decimal point of the dividend the same number of decimal places as the divisor. So, move it two places to the right.\n\nStep 3 Divide 2 364 by 4 the way you divide whole numbers.\n\nStep 4 Write the decimal point of the quotient directly above the decimal point of the dividend.\n\nHence, the quotient of 23.64 and 0.04 is 591."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_0142"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:src="@drawable/ic_whats_in"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"/>
+                                <TextView
+                                    android:text="What’s More"
+                                    android:textSize="18sp"
+                                    android:gravity="center_vertical"
+                                    android:paddingHorizontal="10dp"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/poppins_semi_bold"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"/>
+                                <Button
+                                    android:id="@+id/btn_tts_whats_more"
+                                    android:text="Read"
+                                    android:textAlignment="textStart"
+                                    android:background="@drawable/btn_secondary_button"
+                                    android:drawableStart="@drawable/ic_mic_secondary"
+                                    android:drawablePadding="10dp"
+                                    android:paddingHorizontal="10dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:background="@color/light_gray"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:text="To practice what was given from the previous pages, let us try to see whether you can apply the lessons given. This is a complete self-check activity so we will know whether or not you learned something about the lesson. So, here we go!"
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Activity"
+                                android:padding="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:text="Directions: Read the given figure and perform the following operations. Use your answers to escape from the decimal maze given. Write your answers on your activity notebook."
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Start Here"
+                                android:padding="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <com.ortiz.touchview.TouchImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="250dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="example"
+                                android:src="@drawable/smple_0143"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"

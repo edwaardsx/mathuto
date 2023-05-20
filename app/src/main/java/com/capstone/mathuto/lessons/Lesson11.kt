@@ -38,7 +38,6 @@ class Lesson11 : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         tts = TextToSpeech(this, this)
 
-
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
 
@@ -62,8 +61,8 @@ class Lesson11 : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
         binding.btnTts.setOnClickListener {
             val text = binding.tvLessonsDescriptionOne.text.toString()
-            val text2 = binding.tvLessonsDescriptionTwo.text.toString()
-            val lessonDescriptions = "$text $text2"
+
+            val lessonDescriptions = "$text"
             if (lessonDescriptions.isNotEmpty()) {
                 if (isReadingAloud) {
                     // Stop reading aloud

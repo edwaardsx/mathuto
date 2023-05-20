@@ -61,9 +61,7 @@ class Lesson2 : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
         binding.btnTts.setOnClickListener {
             val text = binding.tvLessonsDescriptionOne.text.toString()
-            val text2 = binding.tvLessonsDescriptionTwo.text.toString()
-            val text3 = binding.tvLessonsDescriptionThree.text.toString()
-            val lessonDescriptions = "$text $text2 $text3"
+            val lessonDescriptions = "$text"
             if (lessonDescriptions.isNotEmpty()) {
                 if (isReadingAloud) {
                     // Stop reading aloud

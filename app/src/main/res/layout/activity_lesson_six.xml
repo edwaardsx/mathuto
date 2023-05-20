@@ -82,6 +82,13 @@
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
+                    <TextView
+                        android:text="Routine Problem:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
                     <TextView
                         android:id="@+id/tv_lessons_description_one"
@@ -90,8 +97,136 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_regular"
                         android:padding="10dp"
-                        android:text="Routine Problem:\n\nProblem: Divide 3/4 by 1/2.\n\nSolution: To divide fractions, we need to multiply the dividend (the first fraction) by the reciprocal of the divisor (the second fraction). So, we have (3/4) ÷ (1/2) = (3/4) × (2/1) = 6/4 = 3/2. Therefore, 3/4 divided by 1/2 is equal to 3/2.\n\nNon-Routine Problem:\n\nProblem: Five friends are sharing a rectangular chocolate bar that measures 2 and 1/4 feet by 1 and 1/2 feet. If they want to divide it equally among themselves, how much chocolate will each friend get?\n\nSolution: To solve this problem, we need to divide a mixed fraction by a whole number. First, we convert the mixed fraction to an improper fraction: 2 and 1/4 = (8/4) + (1/4) = 9/4. Then, we divide the length and width separately.\n\nLength division: (9/4) ÷ 5 = 9/4 × (1/5) = 9/20 feet per friend.\n\nWidth division: (3/2) ÷ 5 = 3/2 × (1/5) = 3/10 feet per friend.\n\nTherefore, each friend will get a piece of chocolate that measures 9/20 feet by 3/10 feet.\n\nThese examples demonstrate the difference between routine and non-routine problems involving division with or without other operations of fractions and mixed fractions. Routine problems typically involve straightforward calculations, while non-routine problems require additional steps and may involve real-world scenarios." />
+                        android:text="Problem: Divide 3/4 by 1/2.\n\nSolution: To divide fractions, we need to multiply the dividend (the first fraction) by the reciprocal of the divisor (the second fraction). So, we have (3/4) ÷ (1/2) = (3/4) × (2/1) = 6/4 = 3/2. Therefore, 3/4 divided by 1/2 is equal to 3/2.\n\nNon-Routine Problem:\n\nProblem: Five friends are sharing a rectangular chocolate bar that measures 2 and 1/4 feet by 1 and 1/2 feet. If they want to divide it equally among themselves, how much chocolate will each friend get?\n\nSolution: To solve this problem, we need to divide a mixed fraction by a whole number. First, we convert the mixed fraction to an improper fraction: 2 and 1/4 = (8/4) + (1/4) = 9/4. Then, we divide the length and width separately.\n\nLength division: (9/4) ÷ 5 = 9/4 × (1/5) = 9/20 feet per friend.\n\nWidth division: (3/2) ÷ 5 = 3/2 × (1/5) = 3/10 feet per friend.\n\nTherefore, each friend will get a piece of chocolate that measures 9/20 feet by 3/10 feet.\n\nThese examples demonstrate the difference between routine and non-routine problems involving division with or without other operations of fractions and mixed fractions. Routine problems typically involve straightforward calculations, while non-routine problems require additional steps and may involve real-world scenarios." />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What’s In"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_whats_in"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Hi! How are you? Are you excited for this new topic? Brace yourself and have fun while learning. This module is focused on giving you the knowledge and skills in solving routine or non-routine problems involving division without or with any of the other operations of fractions and mixed fractions using appropriate problem solving strategies and tools. But before going to the most challenging part of this module, do the following activity first."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Directions:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Solve the division of fraction inside the polygon. If the answer is between 0 and 1, color the shape blue. If it is greater than 1 or less than 2, color it yellow. If it is greater than or equal to 2, color it red. For more fun, trace and cut out the design to form a SOLID FIGURE. Do this in your activity sheet."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_06"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What’s New"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_whats_new"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
 
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Solving word problems can be very challenging yet exciting. To make this lesson easier and interesting, you must review the steps in solving word problem first. Here are some problems and try to find out how to answer this using the steps indicated. Are you ready?"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:text="Example:"
                         android:padding="10dp"
@@ -99,15 +234,19 @@
                         android:fontFamily="@font/poppins_semi_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-                    <ImageView
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Divide: 18 ÷ 1 1/8\n\n= 18 ÷ 1 1/8 = dividing whole number by mixed fraction\n\n= 18 ÷ 9/8 = to divide whole number by mixed fraction, change mixed fraction to improper fraction by multiplying the denominator by the whole number plus the numerator.\n\n= 18/1 × 8/9 = to divide whole number by fraction, get the reciprocal of the divisor then proceed to multiplication and whole number has a denominator of 1\n\n= 18 x 8/1 x 9 = multiply numerator by numerator and denominator by denominator\n\n= 9 x 2 x 8/1 x 9 = factor out the numerator and denominator if possible and apply cancellation method to simplify your answer.\n\n= 2 x 8/1 = simplify your answer\n\n= 16/1 = any number divided by 1 is equal to the number\n\n= 16\n\nAnswer: There are 16 slices that can be cut from the loaf of bread 18 inches long."
+                        android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:contentDescription="example"
-                        android:src="@drawable/smple_mod6"/>
+                        android:src="@drawable/smple_061"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"

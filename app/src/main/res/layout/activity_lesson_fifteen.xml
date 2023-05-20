@@ -20,6 +20,7 @@
             android:layout_width="48dp"
             android:layout_height="?attr/actionBarSize"
             android:contentDescription="@string/back_button"/>
+
         <TextView
             android:text="Lesson 15"
             android:textSize="18sp"
@@ -91,7 +92,6 @@
                         android:fontFamily="@font/poppins_regular"
                         android:padding="10dp"
                         android:text="Hello! How are you doing? Lesson 15 of this module will help you understand how to divide decimals up to 4 decimal places by 0.1, 0.01 and 0.001. Sounds interesting right? Read each part carefully and do the tasks given to you. Are you excited to start reading, answering, and accomplishing the task in this module? Have fun and get ready because you’re learning adventure starts now!" />
-
                     <TextView
                         android:text="Example:"
                         android:padding="10dp"
@@ -99,19 +99,145 @@
                         android:fontFamily="@font/poppins_semi_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-
-
-                    <ImageView
+                    <com.ortiz.touchview.TouchImageView
                         android:layout_width="match_parent"
-                        android:layout_height="400dp"
+                        android:layout_height="250dp"
                         android:layout_gravity="center"
                         android:contentDescription="example"
-                        android:src="@drawable/smple_mod15"/>
-
-
+                        android:src="@drawable/smple_0150"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What’s New"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_whats_new"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
 
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Excellent! You have learned a lot in the previous module. Keep it up.\n\nEduard is a grade 6 pupil. He is very observant. He pays a lot of attention and notices of everything around him.\n\nAre you a keen observer like Eduard? If you are, then answer the following questions by observing the movement of the decimal point in the following number sentences.\n\n8.6253 ÷ 0.1 = 86.253\n\n8.6253 ÷ 0.01 = 862.53\n\n8.6253 ÷ 0.001 = 8 625.3\n\na. What happens to the decimal point?\n\nb. What direction does it move?\n\nc. Is there a pattern of movement in the decimal point?"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/ic_whats_in"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+                        <TextView
+                            android:text="What is It"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                        <Button
+                            android:id="@+id/btn_tts_what_is_it"
+                            android:text="Read"
+                            android:textAlignment="textStart"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawableStart="@drawable/ic_mic_secondary"
+                            android:drawablePadding="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="In dividing decimals by 0.1, 0.01, 0.001..., move the decimal point to the right as many times as the number of decimal places of the number in the dividend. Place a zero (0) if the decimal point has moved to a decimal place without a digit."
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="• Dividing by 0.1 - move one place to the right\n▪ 8.6253 ÷ 0.1 = 86.253\n8 . 6 2 5 3\n\n• Dividing by 0.01 – move two (2) places to the right\n▪ 8.6253 ÷ 0.01 = 862.53\n8 . 6 2 5 3\n\n• Dividing by 0.001 – move three (3) places to the right\n▪ 8.6253 ÷ 0.001 = 8625.3\n8 . 6 2 5 3\n\nHere are some examples:\n▪ 43.657 ÷ 10 = 436.57\n4 3 . 6 5 7\n▪ 21.894 ÷ 100 =2 189.4\n▪ 21.894 ÷ 100 =2 189.4\n▪ 6.36 ÷ 1000 = 6 360\n\n6 . 3 6 0 add zero if needed"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Example:"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <com.ortiz.touchview.TouchImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="example"
+                        android:src="@drawable/smple_0151"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"

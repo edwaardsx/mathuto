@@ -20,15 +20,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:background="#283593"/>
+
                 <ImageButton
                     android:id="@+id/btn_objectives_close"
-                    android:layout_alignParentEnd="true"
-                    android:layout_margin="5dp"
-                    android:background="@null"
-                    android:src="@drawable/ic_close"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:contentDescription="button_close"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@null"
+                    android:contentDescription="button_close"
+                    android:src="@drawable/ic_close" />
             </RelativeLayout>
 
             <RelativeLayout
