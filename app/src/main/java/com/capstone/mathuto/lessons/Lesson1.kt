@@ -40,7 +40,7 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         tts = TextToSpeech(this, this)
 
-        showObjectivesDialog()
+        showObjectives()
 
         binding.btnBack.setOnClickListener {
             finish()
@@ -66,12 +66,10 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
 
             if (lessonDescriptions.isNotEmpty()) {
                 if (isReadingAloud) {
-                    // Stop reading aloud
                     tts.stop()
                     isReadingAloud = false
-                    binding.btnTts.text = "Read"
+                    binding.btnTts.text = "Read Aloud Text"
                 } else {
-                    // Start reading aloud
                     tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop"
@@ -109,7 +107,7 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun showObjectivesDialog() {
+    private fun showObjectives() {
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.activity_objectives_one)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -140,5 +138,4 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
         tts.stop()
         tts.shutdown()
     }
-
 }

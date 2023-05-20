@@ -51,41 +51,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <LinearLayout
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <TextView
                             android:text="Quarter 1 - Module 1:\nAddition and Subtraction of Fractions"
                             android:textSize="18sp"
-                            android:paddingHorizontal="10dp"
-                            android:paddingBottom="10dp"
+                            android:padding="10dp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/poppins_semi_bold"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                         <Button
                             android:id="@+id/btn_tts"
-                            android:text="Read"
-                            android:textAlignment="textStart"
-                            android:layout_marginTop="10dp"
+                            android:text="Read Aloud Text"
                             android:background="@drawable/btn_secondary_button"
                             android:drawableStart="@drawable/ic_mic_secondary"
                             android:drawablePadding="10dp"
-                            android:paddingHorizontal="10dp"
-                            android:layout_width="0dp"
-                            android:layout_weight=".5"
-                            android:layout_height="wrap_content"/>
+                            android:layout_marginStart="6dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"/>
                     </LinearLayout>
 
-                    <ImageView
-                        android:background="@color/light_gray"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"/>
                     <TextView
                         android:id="@+id/tv_lessons_description_one"
                         android:padding="10dp"
-                        android:layout_marginTop="10dp"
                         android:text="This module explains that fractions are expressed as a division calculation, one number divided by another. They are also commonly expressed as one number over another.\n\nA fraction is a part of a whole. It has two parts: numerator, on the top, and the denominator, on the bottom, . The numerator tells the number of parts taken. The denominator tells the number of equal parts of a whole is divided."
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"

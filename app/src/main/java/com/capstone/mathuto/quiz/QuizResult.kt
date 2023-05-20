@@ -13,6 +13,7 @@ import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.UNANSWERED_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.WRONG_ANS
 import com.capstone.mathuto.sqlite.Question
+import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
@@ -34,15 +35,21 @@ class QuizResult : AppCompatActivity() {
         val unansweredQuestion = intent.getIntExtra(UNANSWERED_QUESTIONS, 0)
 
         val entries = mutableListOf<PieEntry>()
-        entries.add(PieEntry(correctAnswer.toFloat(), "Correct"))
-        entries.add(PieEntry(wrongAnswer.toFloat(), "Wrong"))
-        entries.add(PieEntry(unansweredQuestion.toFloat(), "Unanswered"))
+        if (correctAnswer != 0) {
+            entries.add(PieEntry(correctAnswer.toFloat(), "Correct"))
+        }
+        if (wrongAnswer != 0) {
+            entries.add(PieEntry(wrongAnswer.toFloat(), "Wrong"))
+        }
+        if (unansweredQuestion != 0) {
+            entries.add(PieEntry(unansweredQuestion.toFloat(), "Unanswered"))
+        }
 
         val dataSet = PieDataSet(entries, "")
         val colors = mutableListOf<Int>()
-        colors.add(Color.GREEN)
-        colors.add(Color.RED)
-        colors.add(Color.YELLOW)
+        colors.add(Color.parseColor("#43A047"))
+        colors.add(Color.parseColor("#E53935"))
+        colors.add(Color.parseColor("#FFB300"))
         dataSet.colors = colors
 
         val data = PieData(dataSet)
@@ -59,6 +66,12 @@ class QuizResult : AppCompatActivity() {
         binding.pieChart.setEntryLabelTextSize(12f)
         binding.pieChart.setEntryLabelColor(Color.WHITE)
         binding.pieChart.legend.isEnabled = false
+        binding.pieChart.legend.textSize = 12f
+        binding.pieChart.legend.textColor = Color.WHITE
+        binding.pieChart.setDrawCenterText(true)
+        binding.pieChart.centerText = "Result"
+        binding.pieChart.legend.verticalAlignment = Legend.LegendVerticalAlignment.BOTTOM
+        binding.pieChart.legend.horizontalAlignment = Legend.LegendHorizontalAlignment.CENTER
         binding.pieChart.animateY(1000)
         binding.pieChart.invalidate()
 
@@ -71,9 +84,8 @@ class QuizResult : AppCompatActivity() {
         binding.tvUnansweredQuestion.text = "$unansweredQuestion"
         binding.tvUnansweredQuestion.setTextColor(Color.WHITE)
 
-        binding.totalNumberOfQuestions.text = "Total number of questions: $totalQuestions"
-        binding.totalNumberOfQuestions.setTextColor(Color.WHITE)
-
+        //binding.totalNumberOfQuestions.text = "Total number of questions: $totalQuestions"
+        //binding.totalNumberOfQuestions.setTextColor(Color.WHITE)
 
         binding.btnBack.setOnClickListener{
             val intent = Intent(applicationContext,  Lesson1::class.java)
