@@ -28,11 +28,10 @@ class RecyclerAdapter (private val itemList: List<TitleData>,
         if(titleData.status == ONGOING){
             holder.lockUnlockImageView.setImageResource(R.drawable.ic_unlock)
         }else if(titleData.status == COMPLETED){
-            holder.lockUnlockImageView.setImageResource(R.drawable.ic_unlock)
+            holder.lockUnlockImageView.setImageResource(R.drawable.ic_check_circle)
         }else{
             holder.lockUnlockImageView.setImageResource(R.drawable.ic_lock)
         }
-
         holder.itemView.setOnClickListener {
             listener.onItemClick(titleData)
         }

@@ -21,6 +21,12 @@
             android:icon="@drawable/ic_about"
             android:orderInCategory="100"
             app:showAsAction="never" />
+        <item
+            android:id="@+id/list_of_quiz_score"
+            android:title="Scores"
+            android:icon="@drawable/ic_score"
+            android:orderInCategory="100"
+            app:showAsAction="never" />
     </menu>
     </item>
 

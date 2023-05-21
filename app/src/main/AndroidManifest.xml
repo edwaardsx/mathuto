@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mathuto"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MainScoresActivity"
+            android:exported="false" />
         <activity
             android:name=".QuizResultSummaryActivity"
             android:exported="false" />

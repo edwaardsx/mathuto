@@ -1,12 +1,18 @@
 package com.capstone.mathuto.quiz
 
 import android.annotation.SuppressLint
+import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.mathuto.Main
+import com.capstone.mathuto.Main.Companion.QUIZ1_PASSED
+import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL1
 import com.capstone.mathuto.QuizResultSummaryActivity
+import com.capstone.mathuto.R
 import com.capstone.mathuto.databinding.ActivityQuizResultBinding
 import com.capstone.mathuto.lessons.Lesson1
 import com.capstone.mathuto.questions.QuestionOne.CORRECT_ANS
@@ -96,9 +102,13 @@ class QuizResult : AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
         binding.btnMainMenu.setOnClickListener {
-            startActivity(Intent(this, Main::class.java))
+            if(QUIZ1_PASSED && WATCHED_TUTORIAL1)
+                unLockNextLesson2()
+            else
+                startActivity(Intent(this, Main::class.java))
             overridePendingTransition(0, 0)
         }
+
         binding.btnSummary.setOnClickListener{
 
             val bundle = intent.extras
@@ -111,5 +121,19 @@ class QuizResult : AppCompatActivity() {
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)
         }
+    }
+
+    private fun unLockNextLesson2() {
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.activity_unlock_2)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val btnClose = dialog.findViewById<Button>(R.id.btn_ok)
+        btnClose.setOnClickListener {
+            dialog.dismiss()
+            startActivity(Intent(this, Main::class.java))
+            overridePendingTransition(0, 0)
+        }
+        dialog.show()
     }
 }

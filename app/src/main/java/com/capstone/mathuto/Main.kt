@@ -188,6 +188,18 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)
             }
+            R.id.list_of_quiz_score -> {
+                val intent = Intent(applicationContext, MainScoresActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                applicationContext.startActivity(intent)
+                overridePendingTransition(0, 0)
+            }
+            R.id.about -> {
+                val intent = Intent(applicationContext, About::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                applicationContext.startActivity(intent)
+                overridePendingTransition(0, 0)
+            }
             R.id.search -> {
 
             }
