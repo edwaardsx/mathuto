@@ -152,7 +152,7 @@ class QuizTwo : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(applicationContext, QuizResult::class.java)
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
-                if(mCorrectAnswers == 6) Main.QUIZ2_PASSED = true
+                if(mCorrectAnswers >= 6) Main.QUIZ2_PASSED = true
 
                 intent.putExtra(WRONG_ANS,mQuestionList!!.size - mCorrectAnswers)
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList?.size)

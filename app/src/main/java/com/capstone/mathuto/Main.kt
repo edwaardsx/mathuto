@@ -49,7 +49,6 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
             else
                 TitleData("Lesson 1", "Addition and Subtraction of Fractions", Companion.ONGOING),
 
-
             if(QUIZ1_PASSED && WATCHED_TUTORIAL1)
                 TitleData("Lesson 2", "Problem Solving Involving Addition and Subtraction of Fractions", Companion.ONGOING)
             else if (QUIZ2_PASSED && WATCHED_TUTORIAL2)

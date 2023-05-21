@@ -214,7 +214,7 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
                 seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
-                if(mCorrectAnswers == 6) QUIZ1_PASSED = true
+                if(mCorrectAnswers >= 6) QUIZ1_PASSED = true
 
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
                 intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
