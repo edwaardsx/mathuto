@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.capstone.mathuto.Main
 import com.capstone.mathuto.R
 import com.capstone.mathuto.databinding.ActivityQuizTwoBinding
 import com.capstone.mathuto.questions.QuestionOne
@@ -150,6 +151,9 @@ class QuizTwo : AppCompatActivity(), View.OnClickListener {
             handler.postDelayed({
                 val intent = Intent(applicationContext, QuizResult::class.java)
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
+
+                if(mCorrectAnswers == 6) Main.QUIZ2_PASSED = true
+
                 intent.putExtra(WRONG_ANS,mQuestionList!!.size - mCorrectAnswers)
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList?.size)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK

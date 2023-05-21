@@ -13,6 +13,7 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageButton
 import com.capstone.mathuto.Main
+import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL2
 import com.capstone.mathuto.R
 import com.capstone.mathuto.databinding.ActivityLessonTwoBinding
 import com.capstone.mathuto.menu.DevelopmentTeam
@@ -49,6 +50,8 @@ class Lesson2 : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
         binding.btnWatchTutorial.setOnClickListener {
             val intent = Intent(applicationContext, ModuleTwo::class.java)
+            WATCHED_TUTORIAL2 = true
+
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)
@@ -73,10 +76,10 @@ class Lesson2 : AppCompatActivity(), TextToSpeech.OnInitListener {
                     tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop"
-                    }
                 }
             }
         }
+    }
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

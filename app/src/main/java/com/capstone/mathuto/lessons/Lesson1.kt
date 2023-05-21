@@ -23,6 +23,7 @@ import com.capstone.mathuto.timer.QuizTimer1
 import com.capstone.mathuto.watch.ModuleOne
 import java.util.*
 import android.view.MotionEvent
+import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL1
 
 class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
 
@@ -57,6 +58,8 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
         binding.btnWatchTutorial.setOnClickListener {
             val intent = Intent(applicationContext, ModuleOne::class.java)
+            WATCHED_TUTORIAL1 = true
+
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)

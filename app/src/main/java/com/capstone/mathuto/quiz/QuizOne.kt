@@ -21,6 +21,7 @@ import com.capstone.mathuto.sqlite.Question
 import java.util.*
 import kotlin.collections.ArrayList
 import android.os.CountDownTimer
+import com.capstone.mathuto.Main.Companion.QUIZ1_PASSED
 import com.capstone.mathuto.questions.QuestionOne.SELECTED_ANSWERS
 import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
 
@@ -212,6 +213,9 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
 
                 seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
+
+                if(mCorrectAnswers == 6) QUIZ1_PASSED = true
+
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
                 intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
