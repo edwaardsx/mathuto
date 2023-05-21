@@ -24,6 +24,7 @@ import android.os.CountDownTimer
 import com.capstone.mathuto.Main.Companion.QUIZ1_PASSED
 import com.capstone.mathuto.questions.QuestionOne.SELECTED_ANSWERS
 import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
+import com.capstone.mathuto.sqlite.SQLiteHelper
 
 @Suppress("DEPRECATION")
 class QuizOne : AppCompatActivity(), View.OnClickListener {
@@ -48,8 +49,11 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
     private var isBackgroundMusicPlaying: Boolean = false
     private lateinit var selectedAnswer: ArrayList<Int>
 
+    lateinit var db: SQLiteHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        db = SQLiteHelper(this);
 
         binding = ActivityQuizOneBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -208,13 +212,22 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mQuestionList!!.size) {
             handler.postDelayed({
-
                 val intent = Intent(applicationContext, QuizResult::class.java)
-
                 seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
-                if(mCorrectAnswers >= 6) QUIZ1_PASSED = true
+
+                val scores = db.getAllHighScores()
+                if(scores.isEmpty()){
+                    db.insertHighScores("Lesson 1", mCorrectAnswers.toString())
+                }else{
+                    if (mCorrectAnswers > Integer.parseInt(scores.get(0).score))
+                        db.updateHighScores("Lesson 1", mCorrectAnswers.toString())
+                }
+
+                if(mCorrectAnswers >= 6) {
+                    QUIZ1_PASSED = true
+                }
 
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
                 intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))

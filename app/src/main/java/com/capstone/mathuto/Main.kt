@@ -97,17 +97,14 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
             TitleData("Lesson 19", "Solving Multi-Step Problems Involving Division of Decimals and Any of the Other Operations",
                 Companion.LOCK
             ))
-
         val adapter = RecyclerAdapter(itemList, this)
         recyclerAdapter = adapter
 
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
-
     }
 
     override fun onItemClick(titleData: TitleData) {
-
         val intent = when (titleData.lesson) {
             "Lesson 1" -> Intent(this, Lesson1::class.java)
             else -> null
@@ -115,9 +112,7 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
         intent?.let {
             startActivity(intent)
         }
-
-
-        if(titleData.lesson == "Lesson 2" && QUIZ1_PASSED && WATCHED_TUTORIAL1){
+        if (titleData.lesson == "Lesson 2" && QUIZ1_PASSED && WATCHED_TUTORIAL1) {
             val intent = when (titleData.lesson) {
                 "Lesson 2" -> Intent(this, Lesson2::class.java)
                 else -> null
@@ -126,8 +121,7 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
                 startActivity(intent)
             }
         }
-
-        if(titleData.lesson == "Lesson 3" && QUIZ2_PASSED && WATCHED_TUTORIAL2){
+        if (titleData.lesson == "Lesson 3" && QUIZ2_PASSED && WATCHED_TUTORIAL2) {
             val intent = when (titleData.lesson) {
                 "Lesson 3" -> Intent(this, Lesson3::class.java)
                 else -> null
@@ -136,6 +130,7 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
                 startActivity(intent)
             }
         }
+    }
 
 //        val intent = when (titleData.lesson) {
 //            "Lesson 1" -> Intent(this, Lesson1::class.java)
@@ -158,7 +153,6 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
 //            "Lesson 19" -> Intent(this, Lesson19::class.java)
 //            else -> null
 //        }
-    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_item_main, menu)
@@ -194,12 +188,6 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)
             }
-            R.id.about -> {
-                val intent = Intent(applicationContext, About::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                applicationContext.startActivity(intent)
-                overridePendingTransition(0, 0)
-            }
             R.id.search -> {
 
             }
@@ -214,6 +202,7 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
     }
 
     companion object {
+
         var WATCHED_TUTORIAL1: Boolean = false
         var WATCHED_TUTORIAL2: Boolean = false
         var WATCHED_TUTORIAL3: Boolean = false
@@ -222,8 +211,8 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
         var QUIZ2_PASSED: Boolean = false
         var QUIZ3_PASSED: Boolean = false
 
-        const val COMPLETED: String = "Completed"
+        const val COMPLETED: String = "Complete"
         const val LOCK: String = "Lock"
-        const val ONGOING: String = "OnGoing"
+        const val ONGOING: String = "In progress"
     }
 }

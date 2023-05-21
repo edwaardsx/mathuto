@@ -28,8 +28,8 @@ import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL1
 class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private lateinit var binding: ActivityLessonOneBinding
-
     private lateinit var tts: TextToSpeech
+
     private var isReadingAloud = false
 
     @SuppressLint("SetTextI18n")
