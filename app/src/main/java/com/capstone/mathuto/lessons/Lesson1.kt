@@ -4,7 +4,10 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.LinearGradient
+import android.graphics.Shader
 import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.Menu
@@ -46,7 +49,6 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
             finish()
             overridePendingTransition(0, 0)
         }
-
         binding.btnStartQuiz.setOnClickListener {
             val intent = Intent(applicationContext, QuizTimer1::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
@@ -60,22 +62,72 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
             overridePendingTransition(0, 0)
         }
         binding.btnTts.setOnClickListener {
-            val text = binding.tvLessonsDescriptionOne.text.toString()
-            val text2 = binding.tvLessonsDescriptionTwo.text.toString()
-            val lessonDescriptions = "$text $text2"
+            val description1 = binding.tvDescriptionOne.text.toString()
+            val description2 = binding.tvDescriptionTwo.text.toString()
+            val mDescriptions = "$description1 $description2"
 
-            if (lessonDescriptions.isNotEmpty()) {
+            if (mDescriptions.isNotEmpty()) {
                 if (isReadingAloud) {
                     tts.stop()
                     isReadingAloud = false
-                    binding.btnTts.text = "Read Aloud Text"
+                    binding.btnTts.text = "Read"
                 } else {
-                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    tts.speak(mDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop"
                 }
             }
+            binding.btnTts2.setOnClickListener {
+                val description3 = binding.tvDescriptionThree.text.toString()
+                val description4 = binding.tvDescriptionFour.text.toString()
+                val description5 = binding.tvDescriptionFive.text.toString()
+                val mDescriptions = "$description3 $description4 $description5"
+
+                if (mDescriptions.isNotEmpty()) {
+                    if (isReadingAloud) {
+                        tts.stop()
+                        isReadingAloud = false
+                        binding.btnTts.text = "Read"
+                    } else {
+                        tts.speak(mDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                        isReadingAloud = true
+                        binding.btnTts.text = "Stop"
+                    }
+                }
+            }
+            binding.btnTts3.setOnClickListener {
+                val description6 = binding.tvDescriptionSix.text.toString()
+                val description7 = binding.tvDescriptionSeven.text.toString()
+                val description8 = binding.tvDescriptionEight.text.toString()
+                val description9 = binding.tvDescriptionNine.text.toString()
+                val description10 = binding.tvDescriptionTen.text.toString()
+                val description11 = binding.tvDescriptionEleven.text.toString()
+                val mDescriptions = "$description6 $description7 $description8 $description9 $description10 $description11"
+
+                if (mDescriptions.isNotEmpty()) {
+                    if (isReadingAloud) {
+                        tts.stop()
+                        isReadingAloud = false
+                        binding.btnTts.text = "Read"
+                    } else {
+                        tts.speak(mDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                        isReadingAloud = true
+                        binding.btnTts.text = "Stop"
+                    }
+                }
+            }
         }
+
+        val startColor = resources.getColor(R.color.gradient_start_color, null)
+        val endColor = resources.getColor(R.color.gradient_end_color, null)
+
+        val shader: Shader = LinearGradient(
+            0f, 0f, 0f, binding.tvTitle.textSize,
+            intArrayOf(startColor, endColor),
+            null,
+            Shader.TileMode.CLAMP
+        )
+        binding.tvTitle.paint.shader = shader
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -2,10 +2,14 @@ package com.capstone.mathuto
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.LinearGradient
+import android.graphics.Shader
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -70,7 +74,7 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
-    }
+}
 
      override fun onItemClick(titleData: TitleData) {
         val intent = when (titleData.lesson) {

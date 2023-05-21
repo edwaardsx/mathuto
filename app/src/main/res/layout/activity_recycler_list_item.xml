@@ -47,8 +47,18 @@
                     android:layout_height="wrap_content"
                     android:paddingStart="0dp"
                     android:paddingEnd="10dp"
-                    android:paddingBottom="16dp"
                     android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/statusTextView"
+                    android:hint="Status:"
+                    android:textColorHint="#2E7D32"
+                    android:textColor="#2E7D32"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="16dp" />
             </LinearLayout>
             <ImageView
                 android:src="@drawable/ic_chevron_right"

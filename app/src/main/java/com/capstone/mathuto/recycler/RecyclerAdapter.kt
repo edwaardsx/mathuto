@@ -21,6 +21,7 @@ class RecyclerAdapter (private val itemList: List<TitleData>,
         val titleData = filteredItemList[position]
         holder.lessonTextView.text = titleData.lesson
         holder.titleTextView.text = titleData.title
+        holder.statusTextView.text = titleData.status
 
         holder.itemView.setOnClickListener {
             listener.onItemClick(titleData)
@@ -47,5 +48,5 @@ class RecyclerAdapter (private val itemList: List<TitleData>,
     }
 }
 
-data class TitleData(val lesson: String, val title: String)
+data class TitleData(val lesson: String, val title: String, val status: String)
 
