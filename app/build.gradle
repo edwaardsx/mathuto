@@ -57,4 +57,7 @@ dependencies {
     //zoom image
     implementation 'com.github.MikeOrtiz:TouchImageView:1.4.1'
 
+    //vertical stepper
+    implementation 'com.ernestoyaquello.stepperform:vertical-stepper-form:2.7.0'
+
 }

@@ -7,6 +7,5 @@ data class Question(
     var optionB: String,
     var optionC: String,
     var optionD: String,
-    val correctAnswer: Int,
-    val selectedAnswer: Int
+    val correctAnswer: Int
 )

@@ -21,6 +21,7 @@ import com.capstone.mathuto.sqlite.Question
 import java.util.*
 import kotlin.collections.ArrayList
 import android.os.CountDownTimer
+import com.capstone.mathuto.questions.QuestionOne.SELECTED_ANSWERS
 import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
 
 @Suppress("DEPRECATION")
@@ -35,7 +36,6 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
     private var mWrongAnswers: Int = 0
     private var mUnansweredQuestion: Int = 0
     private var areOptionsEnabled = true
-    private var mQuestion = mQuestionList
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
@@ -45,6 +45,7 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
     private var seWrong: MediaPlayer? = null
     private var seBackgroundMusic: MediaPlayer? = null
     private var isBackgroundMusicPlaying: Boolean = false
+    private lateinit var selectedAnswer: ArrayList<Int>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,6 +65,8 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         mQuestionList = QuestionOne.getQuestions()
         mQuestionList?.shuffle()
         setQuestion()
+
+        selectedAnswer = ArrayList<Int>()
 
         seBackgroundMusic?.setOnCompletionListener {
             if (isBackgroundMusicPlaying) {
@@ -184,15 +187,19 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun processOptionSelected() {
+
         areOptionsEnabled = false
         timer.cancel()
         disableOptions()
         val question = mQuestionList?.get(mCurrentPosition - 1)
-        val selectedOption = mSelectedOptionPosition
+        selectedAnswer.add(mSelectedOptionPosition)
+
         if (question!!.correctAnswer != mSelectedOptionPosition) {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
             seWrong?.start()
+
+            mQuestionList
         } else {
             mCorrectAnswers++
             seCorrect?.start()
@@ -200,13 +207,16 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mQuestionList!!.size) {
             handler.postDelayed({
+
                 val intent = Intent(applicationContext, QuizResult::class.java)
+
                 seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
                 intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
-
+                intent.putExtra(CORRECT_ANS, mCorrectAnswers)
+                intent.putIntegerArrayListExtra(SELECTED_ANSWERS, selectedAnswer)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)

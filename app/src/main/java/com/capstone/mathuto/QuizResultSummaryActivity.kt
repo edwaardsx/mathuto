@@ -32,7 +32,7 @@ class QuizResultSummaryActivity : AppCompatActivity() {
         mQuestionList?.shuffle()
         setQuestion()
 
-        binding.btnNext.setOnClickListener {
+        binding.btnNext.setOnClickListener{
             if (!isBackButtonVisible) {
                 binding.btnBackPreviousQuestion.visibility = View.VISIBLE
                 isBackButtonVisible = true
@@ -47,7 +47,7 @@ class QuizResultSummaryActivity : AppCompatActivity() {
                 overridePendingTransition(0, 0)
             }
         }
-        binding.btnBackPreviousQuestion.setOnClickListener {
+        binding.btnBackPreviousQuestion.setOnClickListener{
             if (mCurrentPosition > 1) {
                 mCurrentPosition--
                 setQuestion()
@@ -79,15 +79,18 @@ class QuizResultSummaryActivity : AppCompatActivity() {
             option.typeface = Typeface.DEFAULT
             option.background = ContextCompat.getDrawable(
                 this,
-                R.drawable.quiz_default_option_border_bg
-            )
+                R.drawable.quiz_default_option_border_bg)
         }
     }
 
     @SuppressLint("SetTextI18n")
     private fun setQuestion() {
         defaultOptionView()
-        if (mCurrentPosition <= mQuestionList!!.size) {
+
+        val bundle = intent.extras
+        val myIntArray = bundle!!.getIntegerArrayList(QuestionOne.SELECTED_ANSWERS)
+
+        if (mCurrentPosition < mQuestionList!!.size) {
             val question: Question = mQuestionList!![mCurrentPosition - 1]
             binding.tvProgress.text = "Question $mCurrentPosition"
             binding.tvQuestion.text = question.question
@@ -96,12 +99,12 @@ class QuizResultSummaryActivity : AppCompatActivity() {
             binding.tvOptionThree.text = question.optionC
             binding.tvOptionFour.text = question.optionD
 
-            if (question.correctAnswer == question.selectedAnswer) {
-                answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
-            } else {
-                answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
-                answerView(question.selectedAnswer, R.drawable.quiz_wrong_option_border_bg)
+            if (myIntArray != null) {
+                if(myIntArray[mCurrentPosition] != question.correctAnswer){
+                    answerView(myIntArray[mCurrentPosition], R.drawable.quiz_wrong_option_border_bg)
+                }
             }
+            answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         }
     }
 

@@ -1,7 +1,5 @@
 package com.capstone.mathuto.recycler
 
-import android.annotation.SuppressLint
-import android.content.ClipData
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +9,6 @@ class RecyclerAdapter (private val itemList: List<TitleData>,
                        private val listener: OnItemClickListener):
     RecyclerView.Adapter<ViewHolder>() {
 
-    private var isExpanded: Boolean = false
     private var filteredItemList: List<TitleData> = itemList
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,23 +28,13 @@ class RecyclerAdapter (private val itemList: List<TitleData>,
     }
 
     override fun getItemCount(): Int {
-        return if (isExpanded) {
-            filteredItemList.size
-        } else {
-            minOf(filteredItemList.size, 4)
-        }
+        return filteredItemList.size
     }
 
     interface OnItemClickListener {
         fun onItemClick(titleData: TitleData)
     }
 
-    fun setShowAll(showAll: Boolean) {
-        isExpanded = showAll
-        notifyDataSetChanged()
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
     fun filterItems(query: String) {
         filteredItemList = if (query.isEmpty()) {
             itemList

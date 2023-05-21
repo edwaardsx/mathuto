@@ -18,6 +18,12 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/lessons_lock_unlock"
+                android:src="@drawable/ic_unlock"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="0dp"
@@ -27,21 +33,21 @@
                     android:id="@+id/titleTextView"
                     android:hint="Title"
                     android:fontFamily="@font/poppins_semi_bold"
-                    android:layout_width="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
-                    android:paddingTop="10dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="16dp"
                     android:textSize="18sp" />
                 <TextView
                     android:id="@+id/lessonTextView"
                     android:hint="Title"
                     android:fontFamily="@font/poppins_regular"
                     android:layout_width="match_parent"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
-                    android:paddingBottom="10dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="16dp"
                     android:textSize="18sp" />
             </LinearLayout>
             <ImageView

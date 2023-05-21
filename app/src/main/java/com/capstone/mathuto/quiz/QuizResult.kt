@@ -10,6 +10,7 @@ import com.capstone.mathuto.QuizResultSummaryActivity
 import com.capstone.mathuto.databinding.ActivityQuizResultBinding
 import com.capstone.mathuto.lessons.Lesson1
 import com.capstone.mathuto.questions.QuestionOne.CORRECT_ANS
+import com.capstone.mathuto.questions.QuestionOne.SELECTED_ANSWERS
 import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.UNANSWERED_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.WRONG_ANS
@@ -61,6 +62,7 @@ class QuizResult : AppCompatActivity() {
                 return value.toInt().toString()
             }
         })
+
         binding.pieChart.data = data
         binding.pieChart.description.isEnabled = false
         binding.pieChart.setEntryLabelTextSize(12f)
@@ -77,10 +79,13 @@ class QuizResult : AppCompatActivity() {
 
         binding.tvScoreCorrect.text = "$correctAnswer"
         binding.tvScoreCorrect.setTextColor(Color.WHITE)
+
         binding.tvScoreWrong.text = "$wrongAnswer"
         binding.tvScoreWrong.setTextColor(Color.WHITE)
+
         binding.tvUnansweredQuestion.text = "$unansweredQuestion"
         binding.tvUnansweredQuestion.setTextColor(Color.WHITE)
+
         binding.totalNumberOfQuestions.text = "Total number of questions: $totalQuestions"
         binding.totalNumberOfQuestions.setTextColor(Color.WHITE)
 
@@ -95,7 +100,13 @@ class QuizResult : AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
         binding.btnSummary.setOnClickListener{
+
+            val bundle = intent.extras
+            val myIntArray = bundle!!.getIntegerArrayList(SELECTED_ANSWERS)
+
             val intent = Intent(applicationContext,  QuizResultSummaryActivity::class.java)
+            intent.putIntegerArrayListExtra(SELECTED_ANSWERS, myIntArray)
+
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)

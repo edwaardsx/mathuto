@@ -8,6 +8,7 @@ object QuestionOne {
     const val CORRECT_ANS: String = "correct_answers"
     const val WRONG_ANS: String = "wrong_answers"
     const val UNANSWERED_QUESTIONS: String = "unanswered_questions"
+    const val SELECTED_ANSWERS: String = "selected_answers"
 
     fun getQuestions(): ArrayList<Question>{
 
@@ -20,8 +21,7 @@ object QuestionOne {
             "Simular Fraction",
             "LCD",
             "Similar",
-            1,
-            0
+            1
         )
         questionList.add(question1)
 
@@ -32,8 +32,7 @@ object QuestionOne {
             "Simular Fraction",
             "LCD",
             "Similar",
-            2,
-            0
+            2
         )
         questionList.add(question2)
 
@@ -44,8 +43,7 @@ object QuestionOne {
             "Mixed Fraction",
             "Dissimilar Fraction",
             "Similar",
-            3,
-            0
+            3
         )
         questionList.add(question3)
 
@@ -56,8 +54,7 @@ object QuestionOne {
             "Mixed Fractions",
             "GFC",
             "Similar",
-            2,
-            0
+            2
         )
         questionList.add(question4)
 
@@ -68,8 +65,7 @@ object QuestionOne {
             "Simular Fraction",
             "LCD",
             "Similar",
-            3,
-            0
+            3
         )
         questionList.add(question5)
 
@@ -80,8 +76,7 @@ object QuestionOne {
             "Mixed Fractions",
             "GFC",
             "Similar",
-            3,
-            0
+            3
         )
         questionList.add(question6)
 
@@ -92,8 +87,7 @@ object QuestionOne {
             "Similar",
             "Dissimilar",
             "Mixed Fractions",
-            1,
-            0
+            1
         )
         questionList.add(question7)
 
@@ -104,8 +98,7 @@ object QuestionOne {
             "1/4",
             "2/4",
             "4/3",
-            1,
-            0
+            1
         )
         questionList.add(question8)
 
@@ -116,8 +109,7 @@ object QuestionOne {
             "Similar",
             "Mixed",
             "LCD",
-            2,
-            0
+            2
         )
         questionList.add(question9)
 
@@ -128,8 +120,7 @@ object QuestionOne {
             "Similar",
             "Mixed",
             "GCF",
-            1,
-            0
+            1
         )
         questionList.add(question10)
 

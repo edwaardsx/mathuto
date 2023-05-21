@@ -23,8 +23,6 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
     private lateinit var carouselView: CarouselView
     private lateinit var recyclerAdapter: RecyclerAdapter
 
-    private var isShowingAll: Boolean = false
-
     private val carouselImages = intArrayOf(
         R.drawable.img_carousel_one,
         R.drawable.img_carousel_two,
@@ -72,20 +70,6 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
-        binding.btnShowMore.setOnClickListener {
-            isShowingAll = !isShowingAll
-            recyclerAdapter.setShowAll(isShowingAll)
-            updateButtonText()
-        }
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun updateButtonText() {
-        if (isShowingAll) {
-            binding.btnShowMore.text = "Show less"
-        } else {
-            binding.btnShowMore.text = "Show more"
-        }
     }
 
      override fun onItemClick(titleData: TitleData) {
