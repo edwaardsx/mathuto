@@ -1,20 +1,22 @@
 package com.capstone.mathuto.questions
 
-import com.capstone.mathuto.quiz.QuestionMultipleChoice
+import com.capstone.mathuto.sqlite.Question
 
 object QuestionSeventeen {
 
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANS: String = "correct_answers"
     const val WRONG_ANS: String = "wrong_answers"
+    const val UNANSWERED_QUESTIONS: String = "unanswered_questions"
+    const val SELECTED_ANSWERS: String = "selected_answers"
 
-    fun getQuestions(): ArrayList<QuestionMultipleChoice>{
+    fun getQuestions(): ArrayList<Question>{
 
-        val questionList = ArrayList<QuestionMultipleChoice>()
+        val questionList = ArrayList<Question>()
 
-        val que1 = QuestionMultipleChoice(
+        val que1 = Question(
             1,
-            "1. Which of the following fractions when converted to decimal will have a repeating decimal quotient?",
+            "Which of the following fractions when converted to decimal will have a repeating decimal quotient?",
             "1/2 ",
             "1/3 ",
             "3/7",
@@ -23,9 +25,9 @@ object QuestionSeventeen {
         )
         questionList.add(que1)
 
-        val que2 = QuestionMultipleChoice(
+        val que2 = Question(
             1,
-            "2. What is the remainder of a terminating decimal quotient?",
+            "What is the remainder of a terminating decimal quotient?",
             "0",
             "1",
             "2",
@@ -34,9 +36,9 @@ object QuestionSeventeen {
         )
         questionList.add(que2)
 
-        val que3 = QuestionMultipleChoice(
+        val que3 = Question(
             1,
-            "3. What do we call the digit that is repeated in a repeating decimal quotient?",
+            "What do we call the digit that is repeated in a repeating decimal quotient?",
             "repetitor",
             "repetend",
             "repeating",
@@ -45,9 +47,9 @@ object QuestionSeventeen {
         )
         questionList.add(que3)
 
-        val que4 = QuestionMultipleChoice(
+        val que4 = Question(
             1,
-            "4. A repeating decimal quotient results when the division algorithms gives the same repeatedly.",
+            "A repeating decimal quotient results when the division algorithms gives the same repeatedly.",
             "quotient",
             "dividend",
             "remainders",
@@ -56,9 +58,9 @@ object QuestionSeventeen {
         )
         questionList.add(que4)
 
-        val que5 = QuestionMultipleChoice(
+        val que5 = Question(
             1,
-            "5. When you divide 5 by 17, it will give you a what decimal quotient?",
+            "When you divide 5 by 17, it will give you a what decimal quotient?",
             "repeating",
             "terminating",
             "non-terminating",
@@ -67,9 +69,9 @@ object QuestionSeventeen {
         )
         questionList.add(que5)
 
-        val que6 = QuestionMultipleChoice(
+        val que6 = Question(
             1,
-            "6. Which of the following decimals is a terminating decimal?",
+            "Which of the following decimals is a terminating decimal?",
             "0.125",
             "0.333...",
             "0.7151515...",
@@ -78,9 +80,9 @@ object QuestionSeventeen {
         )
         questionList.add(que6)
 
-        val que7 = QuestionMultipleChoice(
+        val que7 = Question(
             1,
-            "7. What type of decimal is 0.75?",
+            "What type of decimal is 0.75?",
             "Terminating",
             "Non-terminating",
             "Repeating",
@@ -89,9 +91,9 @@ object QuestionSeventeen {
         )
         questionList.add(que7)
 
-        val que8 = QuestionMultipleChoice(
+        val que8 = Question(
             1,
-            "8. Which of the following decimals is a non-terminating decimal?",
+            "Which of the following decimals is a non-terminating decimal?",
             "0.25",
             "0.5",
             "0.75",
@@ -100,9 +102,9 @@ object QuestionSeventeen {
         )
         questionList.add(que8)
 
-        val que9 = QuestionMultipleChoice(
+        val que9 = Question(
             1,
-            "9. What type of decimal is 0.625?",
+            "What type of decimal is 0.625?",
             "Terminating",
             "Non-terminating",
             "Repeating",
@@ -111,9 +113,9 @@ object QuestionSeventeen {
         )
         questionList.add(que9)
 
-        val que10 = QuestionMultipleChoice(
+        val que10 = Question(
             1,
-            "10. Which of the following decimals is a repeating decimal?",
+            "Which of the following decimals is a repeating decimal?",
             "0.2",
             "0.333...",
             "0.75",

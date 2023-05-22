@@ -62,15 +62,63 @@ class Lesson5 : AppCompatActivity(), TextToSpeech.OnInitListener {
             val lessonDescriptions = "$text"
             if (lessonDescriptions.isNotEmpty()) {
                 if (isReadingAloud) {
-                    // Stop reading aloud
                     tts.stop()
                     isReadingAloud = false
                     binding.btnTts.text = "Read"
                 } else {
-                    // Start reading aloud
                     tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop"
+                }
+            }
+        }
+        binding.btnTts2.setOnClickListener {
+            val text2 = binding.tvLessonsDescriptionTwo.text.toString()
+            val text3 = binding.tvLessonsDescriptionThree.text.toString()
+            val text4 = binding.tvLessonsDescriptionFour.text.toString()
+            val lessonDescriptions = "$text2 $text3 $text4"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts2.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts2.text = "Stop"
+                }
+            }
+        }
+        binding.btnTts3.setOnClickListener {
+            val text5 = binding.tvLessonsDescriptionFive.text.toString()
+            val text6 = binding.tvLessonsDescriptionSix.text.toString()
+            val lessonDescriptions = "$text5 $text6"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts3.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts3.text = "Stop"
+                }
+            }
+        }
+        binding.btnTts4.setOnClickListener {
+            val text7 = binding.tvLessonsDescriptionSeven.text.toString()
+            val text8 = binding.tvLessonsDescriptionEight.text.toString()
+            val text9 = binding.tvLessonsDescriptionNine.text.toString()
+            val lessonDescriptions = "$text7 $text8 $text9"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts4.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts4.text = "Stop"
                 }
             }
         }

@@ -73,7 +73,4 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "Userscores.db"
         db.close()
         return HighscoresList
     }
-
-
-
 }

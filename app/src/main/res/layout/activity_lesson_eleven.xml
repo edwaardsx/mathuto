@@ -29,7 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </androidx.appcompat.widget.Toolbar>
-
     <ScrollView
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
@@ -54,7 +53,6 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -137,7 +135,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_nis_it"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -148,13 +146,13 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:layout_marginTop="10dp"
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_two"
                         android:layout_marginTop="10dp"
                         android:text="To solve the problem, you can follow the following steps:"
                         android:fontFamily="@font/poppins_regular"
@@ -168,6 +166,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_three"
                         android:layout_marginTop="10dp"
                         android:text="1. Read and understand the problem.\n\n2. Know what is asked \n\n- How much will she pay for the three pairs of socks?\n\n3. Find the necessary information or given facts. The given facts are: 3 pairs of socks, and ₱ 263.50 each pair, "
                         android:fontFamily="@font/poppins_regular"
@@ -181,6 +180,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_four"
                         android:layout_marginTop="10dp"
                         android:text="1. Determine the operation to be used.\n\n- multiplication\n\n2. Write the number sentence\n\n3 x ₱ 263.50 = N"
                         android:fontFamily="@font/poppins_regular"
@@ -194,6 +194,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_five"
                         android:layout_marginTop="10dp"
                         android:text="Show your solution:\n\n3 x ₱ 263.50 = N\n\n₱ 790.50 = N\n\nTherefore, N = ₱ 790.50"
                         android:fontFamily="@font/poppins_regular"
@@ -207,6 +208,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_six"
                         android:layout_marginTop="10dp"
                         android:text="- Mother will pay ₱ 790.50 for the three pairs of socks"
                         android:fontFamily="@font/poppins_regular"
@@ -220,6 +222,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_seven"
                         android:layout_marginTop="10dp"
                         android:text="Did I do the operation correctly? Is my answer reasonable?\n\nDid I write my answer in a complete sentence?\n\n* Note: Problem 1 is an example of a routine problem. The solutions used can be applied in daily living or in the future."
                         android:fontFamily="@font/poppins_regular"

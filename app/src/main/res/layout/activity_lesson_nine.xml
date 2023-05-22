@@ -138,7 +138,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_new"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -163,6 +163,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_two"
                         android:layout_marginTop="10dp"
                         android:text="Mother buys 23 pieces of dressed chicken to be fried for her restaurant. How much will she pay if each kilo costs ₱ 143.15?"
                         android:fontFamily="@font/poppins_regular"
@@ -220,7 +221,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_what_is_it"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -238,6 +239,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_three"
                         android:layout_marginTop="10dp"
                         android:text="What is the question?\n\n➢ How much will she pay for the dressed chicken?\n\nWhat will you do to answer the question?\n\n➢ Multiply ₱ 143.15 by 23\n\nHow many decimal places are there in the multiplicand and multiplier?\n\n➢ ( 2 places in the multiplicand and none in the multiplier )\n\nSo, putting the same number of decimal places in the final product, the answer is ₱ 3,292.45\n\nMother will be paying ₱ 3,292.45 for the chickens."
                         android:fontFamily="@font/poppins_regular"

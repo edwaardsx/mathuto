@@ -7,14 +7,19 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.mathuto.Main
+import com.capstone.mathuto.Main.Companion.QUIZ16_PASSED
 import com.capstone.mathuto.Main.Companion.QUIZ1_PASSED
 import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL1
-import com.capstone.mathuto.QuizResultSummaryActivity
+import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL16
+import com.capstone.mathuto.QuizResultSummaryActivity1
+import com.capstone.mathuto.QuizResultSummaryActivity16
 import com.capstone.mathuto.R
-import com.capstone.mathuto.databinding.ActivityQuizResultBinding
+import com.capstone.mathuto.databinding.ActivityQuizResult16Binding
 import com.capstone.mathuto.lessons.Lesson1
+import com.capstone.mathuto.lessons.Lesson16
 import com.capstone.mathuto.questions.QuestionOne.CORRECT_ANS
 import com.capstone.mathuto.questions.QuestionOne.SELECTED_ANSWERS
 import com.capstone.mathuto.questions.QuestionOne.TOTAL_QUESTIONS
@@ -26,15 +31,15 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
 
-class QuizResult : AppCompatActivity() {
+class QuizResult16 : AppCompatActivity() {
 
-    private lateinit var binding: ActivityQuizResultBinding
+    private lateinit var binding: ActivityQuizResult16Binding
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityQuizResultBinding.inflate(layoutInflater)
+        binding = ActivityQuizResult16Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS, 0)
@@ -96,25 +101,24 @@ class QuizResult : AppCompatActivity() {
         binding.totalNumberOfQuestions.setTextColor(Color.WHITE)
 
         binding.btnBack.setOnClickListener{
-            val intent = Intent(applicationContext,  Lesson1::class.java)
+            val intent = Intent(applicationContext,  Lesson16::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)
         }
         binding.btnMainMenu.setOnClickListener {
-            if(QUIZ1_PASSED && WATCHED_TUTORIAL1)
-                unLockNextLesson2()
+            if(QUIZ16_PASSED && WATCHED_TUTORIAL16)
+                unLockNextLesson17()
             else
                 startActivity(Intent(this, Main::class.java))
             overridePendingTransition(0, 0)
         }
 
         binding.btnSummary.setOnClickListener{
-
             val bundle = intent.extras
             val myIntArray = bundle!!.getIntegerArrayList(SELECTED_ANSWERS)
 
-            val intent = Intent(applicationContext,  QuizResultSummaryActivity::class.java)
+            val intent = Intent(applicationContext,  QuizResultSummaryActivity16::class.java)
             intent.putIntegerArrayListExtra(SELECTED_ANSWERS, myIntArray)
 
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
@@ -123,17 +127,24 @@ class QuizResult : AppCompatActivity() {
         }
     }
 
-    private fun unLockNextLesson2() {
+    private fun unLockNextLesson17() {
         val dialog = Dialog(this)
-        dialog.setContentView(R.layout.activity_unlock_2)
+        dialog.setContentView(R.layout.activity_unlock_17)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
+        dialog.show()
+
+        val btnUnlockClose = dialog.findViewById<ImageButton>(R.id.btn_unlock_close)
+        btnUnlockClose.setOnClickListener {
+            dialog.dismiss()
+            startActivity(Intent(this, Main::class.java))
+            overridePendingTransition(0, 0)
+        }
         val btnClose = dialog.findViewById<Button>(R.id.btn_ok)
         btnClose.setOnClickListener {
             dialog.dismiss()
             startActivity(Intent(this, Main::class.java))
             overridePendingTransition(0, 0)
         }
-        dialog.show()
     }
 }

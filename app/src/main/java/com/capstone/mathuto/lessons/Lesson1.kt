@@ -7,23 +7,21 @@ import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL1
+import com.capstone.mathuto.R
+import com.capstone.mathuto.databinding.ActivityLessonOneBinding
 import com.capstone.mathuto.menu.DevelopmentTeam
 import com.capstone.mathuto.menu.IntroductoryMessage
 import com.capstone.mathuto.menu.TableOfContents
-import com.capstone.mathuto.R
-import com.capstone.mathuto.databinding.ActivityLessonOneBinding
 import com.capstone.mathuto.timer.QuizTimer1
 import com.capstone.mathuto.watch.ModuleOne
 import java.util.*
-import android.view.MotionEvent
-import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL1
 
 class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
 
@@ -67,15 +65,15 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
         binding.btnTts.setOnClickListener {
             val description1 = binding.tvDescriptionOne.text.toString()
             val description2 = binding.tvDescriptionTwo.text.toString()
-            val mDescriptions = "$description1 $description2"
+            val mDescription  = "$description1 $description2"
 
-            if (mDescriptions.isNotEmpty()) {
+            if (mDescription.isNotEmpty()) {
                 if (isReadingAloud) {
                     tts.stop()
                     isReadingAloud = false
                     binding.btnTts.text = "Read"
                 } else {
-                    tts.speak(mDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    tts.speak(mDescription, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop"
                 }
@@ -84,17 +82,17 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
                 val description3 = binding.tvDescriptionThree.text.toString()
                 val description4 = binding.tvDescriptionFour.text.toString()
                 val description5 = binding.tvDescriptionFive.text.toString()
-                val mDescriptions = "$description3 $description4 $description5"
+                val nDescription  = "$description3 $description4 $description5"
 
-                if (mDescriptions.isNotEmpty()) {
+                if (nDescription.isNotEmpty()) {
                     if (isReadingAloud) {
                         tts.stop()
                         isReadingAloud = false
-                        binding.btnTts.text = "Read"
+                        binding.btnTts2.text = "Read"
                     } else {
-                        tts.speak(mDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                        tts.speak(nDescription, TextToSpeech.QUEUE_FLUSH, null, null)
                         isReadingAloud = true
-                        binding.btnTts.text = "Stop"
+                        binding.btnTts2.text = "Stop"
                     }
                 }
             }
@@ -105,17 +103,17 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
                 val description9 = binding.tvDescriptionNine.text.toString()
                 val description10 = binding.tvDescriptionTen.text.toString()
                 val description11 = binding.tvDescriptionEleven.text.toString()
-                val mDescriptions = "$description6 $description7 $description8 $description9 $description10 $description11"
+                val vDescription = "$description6 $description7 $description8 $description9 $description10 $description11"
 
-                if (mDescriptions.isNotEmpty()) {
+                if (vDescription.isNotEmpty()) {
                     if (isReadingAloud) {
                         tts.stop()
                         isReadingAloud = false
-                        binding.btnTts.text = "Read"
+                        binding.btnTts3.text = "Read"
                     } else {
-                        tts.speak(mDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                        tts.speak(vDescription, TextToSpeech.QUEUE_FLUSH, null, null)
                         isReadingAloud = true
-                        binding.btnTts.text = "Stop"
+                        binding.btnTts3.text = "Stop"
                     }
                 }
             }

@@ -1,20 +1,22 @@
 package com.capstone.mathuto.questions
 
-import com.capstone.mathuto.quiz.QuestionMultipleChoice
+import com.capstone.mathuto.sqlite.Question
 
 object QuestionNine {
 
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANS: String = "correct_answers"
     const val WRONG_ANS: String = "wrong_answers"
+    const val UNANSWERED_QUESTIONS: String = "unanswered_questions"
+    const val SELECTED_ANSWERS: String = "selected_answers"
 
-    fun getQuestions(): ArrayList<QuestionMultipleChoice>{
+    fun getQuestions(): ArrayList<Question>{
 
-        val questionList = ArrayList<QuestionMultipleChoice>()
+        val questionList = ArrayList<Question>()
 
-        val que1 = QuestionMultipleChoice(
+        val que1 = Question(
             1,
-            "1.) 0.23\\nx 0.7\\n_______",
+            "0.23\\nx 0.7\\n_______",
             "3.325",
             "4.1393",
             "0.161",
@@ -23,9 +25,9 @@ object QuestionNine {
         )
         questionList.add(que1)
 
-        val que2 = QuestionMultipleChoice(
+        val que2 = Question(
             1,
-            "2.) 7.2\\nx 2.3\\n_______",
+            "7.2\\nx 2.3\\n_______",
             "3.325",
             "16.56",
             "15.762",
@@ -34,9 +36,9 @@ object QuestionNine {
         )
         questionList.add(que2)
 
-        val que3 = QuestionMultipleChoice(
+        val que3 = Question(
             1,
-            "3.) 0.35\\nx 9.5\\n________",
+            "0.35\\nx 9.5\\n________",
             "90",
             "15.808",
             "3.325",
@@ -45,10 +47,9 @@ object QuestionNine {
         )
         questionList.add(que3)
 
-        val que4 = QuestionMultipleChoice(
+        val que4 = Question(
             1,
-            "\n" +
-                    "4.) 4.16\\nx 3.8\\n________",
+            "4.16\\nx 3.8\\n________",
             "0.161",
             "15.808",
             "15.808",
@@ -57,9 +58,9 @@ object QuestionNine {
         )
         questionList.add(que4)
 
-        val que5 = QuestionMultipleChoice(
+        val que5 = Question(
             1,
-            "5.) 21.3 x 0.74",
+            "21.3 x 0.74",
             "15.762",
             "15.808",
             "0.161",
@@ -68,9 +69,9 @@ object QuestionNine {
         )
         questionList.add(que5)
 
-        val que6 = QuestionMultipleChoice(
+        val que6 = Question(
             1,
-            "6.) 7.81 x 0.53",
+            "7.81 x 0.53",
             "15.762",
             "15.808",
             "0.161",
@@ -79,9 +80,9 @@ object QuestionNine {
         )
         questionList.add(que6)
 
-        val que7 = QuestionMultipleChoice(
+        val que7 = Question(
             1,
-            "7.) 39.6 x 5.8",
+            "39.6 x 5.8",
             "15.762",
             "15.808",
             "0.161",
@@ -90,9 +91,9 @@ object QuestionNine {
         )
         questionList.add(que7)
 
-        val que8 = QuestionMultipleChoice(
+        val que8 = Question(
             1,
-            "8.) A fruit vendor was able to sell 7.5 dozens of mangoes. How many pieces of mangoes were he able to sell?",
+            "A fruit vendor was able to sell 7.5 dozens of mangoes. How many pieces of mangoes were he able to sell?",
             "90",
             "80",
             "30",
@@ -101,9 +102,9 @@ object QuestionNine {
         )
         questionList.add(que8)
 
-        val que9 = QuestionMultipleChoice(
+        val que9 = Question(
             1,
-            "9.) A lumberyard sells 21 long wood mouldings. If each moulding measures 2.25 meters each, how many meters of mouldings are there?\n",
+            "A lumberyard sells 21 long wood mouldings. If each moulding measures 2.25 meters each, how many meters of mouldings are there?\n",
             "47.25",
             "23.54",
             "32.12",
@@ -112,9 +113,9 @@ object QuestionNine {
         )
         questionList.add(que9)
 
-        val que10 = QuestionMultipleChoice(
+        val que10 = Question(
             1,
-            "10.) A school lawn has a dimension of 73.5 meters by 25.8 meters. What is the area of the school lawn?",
+            "A school lawn has a dimension of 73.5 meters by 25.8 meters. What is the area of the school lawn?",
             "1,896.3 ",
             "123.2",
             "3124.2",

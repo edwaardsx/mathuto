@@ -7,6 +7,8 @@ object QuestionNineteen {
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANS: String = "correct_answers"
     const val WRONG_ANS: String = "wrong_answers"
+    const val UNANSWERED_QUESTIONS: String = "unanswered_questions"
+    const val SELECTED_ANSWERS: String = "selected_answers"
 
     fun getQuestions(): ArrayList<QuestionTrueFalse>{
 
@@ -14,7 +16,7 @@ object QuestionNineteen {
 
         val que1 = QuestionTrueFalse(
             1,
-            "1. When solving multi-step problems involving division of decimals and other operations, you must always perform the division operation first.",
+            "When solving multi-step problems involving division of decimals and other operations, you must always perform the division operation first.",
             "True",
             "False",
             2
@@ -23,7 +25,7 @@ object QuestionNineteen {
 
         val que2 = QuestionTrueFalse(
             1,
-            "2. In multi-step problems involving division of decimals, you should always round the quotient to the nearest whole number.",
+            "In multi-step problems involving division of decimals, you should always round the quotient to the nearest whole number.",
             "True",
             "False",
             2
@@ -32,7 +34,7 @@ object QuestionNineteen {
 
         val que3 = QuestionTrueFalse(
             1,
-            "3. In multi-step problems, the order in which you perform the operations can affect the final result.",
+            "In multi-step problems, the order in which you perform the operations can affect the final result.",
             "True",
             "False",
             1
@@ -41,7 +43,7 @@ object QuestionNineteen {
 
         val que4 = QuestionTrueFalse(
             1,
-            "4. When solving multi-step problems involving division of decimals and other operations, you should always start with the operation that appears first from left to right.",
+            "When solving multi-step problems involving division of decimals and other operations, you should always start with the operation that appears first from left to right.",
             "True",
             "False",
             2
@@ -50,7 +52,7 @@ object QuestionNineteen {
 
         val que5 = QuestionTrueFalse(
             1,
-            "5. When solving multi-step problems, it is not necessary to show the intermediate steps or calculations.",
+            "When solving multi-step problems, it is not necessary to show the intermediate steps or calculations.",
             "True",
             "False",
             2
@@ -59,7 +61,7 @@ object QuestionNineteen {
 
         val que6 = QuestionTrueFalse(
             1,
-            "6. In multi-step problems involving division of decimals, it is acceptable to approximate decimal numbers to whole numbers to simplify the calculations.",
+            "In multi-step problems involving division of decimals, it is acceptable to approximate decimal numbers to whole numbers to simplify the calculations.",
             "True",
             "False",
             1
@@ -68,7 +70,7 @@ object QuestionNineteen {
 
         val que7 = QuestionTrueFalse(
             1,
-            "7. The order of operations is the same when solving multi-step problems with both whole numbers and decimals.",
+            "The order of operations is the same when solving multi-step problems with both whole numbers and decimals.",
             "True",
             "False",
             1
@@ -77,7 +79,7 @@ object QuestionNineteen {
 
         val que8 = QuestionTrueFalse(
             1,
-            "8. When solving multi-step problems, you can perform the operations in any order as long as you end up with the correct answer.",
+            "When solving multi-step problems, you can perform the operations in any order as long as you end up with the correct answer.",
             "True",
             "False",
             2
@@ -86,7 +88,7 @@ object QuestionNineteen {
 
         val que9 = QuestionTrueFalse(
             1,
-            "9. In multi-step problems involving division of decimals, the final answer should always be expressed as a decimal.",
+            "In multi-step problems involving division of decimals, the final answer should always be expressed as a decimal.",
             "True",
             "False",
             2
@@ -95,7 +97,7 @@ object QuestionNineteen {
 
         val que10 = QuestionTrueFalse(
             1,
-            "10. It is not necessary to check the reasonableness of the final answer in multi-step problems involving division of decimals.",
+            "It is not necessary to check the reasonableness of the final answer in multi-step problems involving division of decimals.",
             "True",
             "False",
             2

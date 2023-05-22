@@ -126,6 +126,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_four"
                         android:text="Understand:\n\nAsked: distance travel/number of km travel\n\nGiven: 54 kph, 2 2/6 hours\n\nPlan:Operation: multiplication\n\nSolve:\n\n54 x 2 2/6 = 54 x 14/6 = 54 x 14/6= 126 km\n\nAnswer: Dave can travel 126 km.\n\nCheck:\n\n126 ÷ 54 = 2 18/54 or 2 2/6"
                         android:padding="10dp"
                         android:fontFamily="@font/poppins_regular"
@@ -165,7 +166,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_in"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -183,12 +184,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_five"
                         android:layout_marginTop="10dp"
                         android:text="Are you ready kid to take the challenge? The gate is open wide for you to get inside to this challenging world."
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_six"
                         android:layout_marginTop="10dp"
                         android:text="A. Directions: Give the answer in lowest term. Write you answers in your answer sheets"
                         android:fontFamily="@font/poppins_regular"
@@ -238,7 +241,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_what_is_it"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -256,7 +259,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
-                        android:id="@+id/tv_whats_it_is"
+                        android:id="@+id/tv_lessons_description_seven"
                         android:layout_marginTop="10dp"
                         android:text="Kids, wear your smile! This time you have to study the different examples in step by step process. Different methods are also introduced in finding the product of the given facts in problem solving. You may use either of the methods. If you discover another method or process, it is acceptable as long as you get the correct answer. That is part of your exploration. Thus, mathematicians believe that there are so many ways in finding the right answer."
                         android:fontFamily="@font/poppins_regular"

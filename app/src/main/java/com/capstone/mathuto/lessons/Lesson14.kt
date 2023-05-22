@@ -76,6 +76,54 @@ class Lesson14 : AppCompatActivity(), TextToSpeech.OnInitListener {
                 }
             }
         }
+        binding.btnTts2.setOnClickListener {
+            val text2 = binding.tvLessonsDescriptionTwo.text.toString()
+            val text3 = binding.tvLessonsDescriptionThree.text.toString()
+            val lessonDescriptions = "$text2 $text3"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts2.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts2.text = "Stop"
+                }
+            }
+        }
+        binding.btnTts3.setOnClickListener {
+            val text4 = binding.tvLessonsDescriptionFour.text.toString()
+            val text5 = binding.tvLessonsDescriptionFive.text.toString()
+            val lessonDescriptions = "$text4 $text5"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts3.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts3.text = "Stop"
+                }
+            }
+        }
+        binding.btnTts4.setOnClickListener {
+            val text6 = binding.tvLessonsDescriptionSix.text.toString()
+            val text7 = binding.tvLessonsDescriptionSeven.text.toString()
+            val lessonDescriptions = "$text6 $text7"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts4.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts4.text = "Stop"
+                }
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

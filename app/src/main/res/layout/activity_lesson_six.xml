@@ -131,7 +131,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_in"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -148,6 +148,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_two"
                         android:layout_marginTop="10dp"
                         android:text="Hi! How are you? Are you excited for this new topic? Brace yourself and have fun while learning. This module is focused on giving you the knowledge and skills in solving routine or non-routine problems involving division without or with any of the other operations of fractions and mixed fractions using appropriate problem solving strategies and tools. But before going to the most challenging part of this module, do the following activity first."
                         android:fontFamily="@font/poppins_regular"
@@ -161,6 +162,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_three"
                         android:layout_marginTop="10dp"
                         android:text="Solve the division of fraction inside the polygon. If the answer is between 0 and 1, color the shape blue. If it is greater than 1 or less than 2, color it yellow. If it is greater than or equal to 2, color it red. For more fun, trace and cut out the design to form a SOLID FIGURE. Do this in your activity sheet."
                         android:fontFamily="@font/poppins_regular"
@@ -204,7 +206,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_new"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -222,6 +224,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_four"
                         android:layout_marginTop="10dp"
                         android:text="Solving word problems can be very challenging yet exciting. To make this lesson easier and interesting, you must review the steps in solving word problem first. Here are some problems and try to find out how to answer this using the steps indicated. Are you ready?"
                         android:fontFamily="@font/poppins_regular"
@@ -235,6 +238,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_five"
                         android:layout_marginTop="10dp"
                         android:text="Divide: 18 ÷ 1 1/8\n\n= 18 ÷ 1 1/8 = dividing whole number by mixed fraction\n\n= 18 ÷ 9/8 = to divide whole number by mixed fraction, change mixed fraction to improper fraction by multiplying the denominator by the whole number plus the numerator.\n\n= 18/1 × 8/9 = to divide whole number by fraction, get the reciprocal of the divisor then proceed to multiplication and whole number has a denominator of 1\n\n= 18 x 8/1 x 9 = multiply numerator by numerator and denominator by denominator\n\n= 9 x 2 x 8/1 x 9 = factor out the numerator and denominator if possible and apply cancellation method to simplify your answer.\n\n= 2 x 8/1 = simplify your answer\n\n= 16/1 = any number divided by 1 is equal to the number\n\n= 16\n\nAnswer: There are 16 slices that can be cut from the loaf of bread 18 inches long."
                         android:fontFamily="@font/poppins_regular"

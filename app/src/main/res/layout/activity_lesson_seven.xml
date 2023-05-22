@@ -91,7 +91,6 @@
                         android:fontFamily="@font/poppins_regular"
                         android:padding="10dp"
                         android:text="Decimals can be defined as a whole number; the fractional part is separated by a decimal point which can be read as “and”. The digits following the decimal point show a value smaller than one.\n\nPlace value is the value where a digit is in a decimal number.\n\nStandard form is the usual way to write a decimal, such as 7.32.\n\nWord form is writing the decimals in words, such as seven and one hundred twenty-five thousandths.\n\nLet’s study the table." />
-
                     <TextView
                         android:text="Example:"
                         android:padding="10dp"
@@ -130,10 +129,8 @@
                         android:layout_height="match_parent"
                         android:contentDescription="example"
                         android:src="@drawable/smple_mod7"/>
-
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
             <androidx.cardview.widget.CardView
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp"
@@ -165,7 +162,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_new"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -183,6 +180,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_four"
                         android:layout_marginTop="10dp"
                         android:text="In this lesson we will briefly review decimals and the relationship to place value. We have just started. We feel how eager you are to learn the content of this module. We hope that you keep it up for you to accomplish the activities/exercises of this lesson."
                         android:fontFamily="@font/poppins_regular"
@@ -196,6 +194,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_five"
                         android:layout_marginTop="10dp"
                         android:text="On the Place Value Chart\n\nBefore we proceed on addition and subtraction of decimals, it is necessary that you know how to read and write the standard form of the decimals. And now let’s try to work on to the next activities.\n\nBattle of Marathon\n\nRead the given figure and write its word name"
                         android:fontFamily="@font/poppins_regular"
@@ -208,7 +207,6 @@
                         android:src="@drawable/smple_07"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"

@@ -4,42 +4,60 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.capstone.mathuto.questions.QuestionOne
+import com.capstone.mathuto.Main.Companion.QUIZ8_PASSED
 import com.capstone.mathuto.R
 import com.capstone.mathuto.databinding.ActivityQuizEightBinding
-import com.capstone.mathuto.databinding.ActivityQuizOneBinding
-import com.capstone.mathuto.databinding.ActivityQuizSevenBinding
 import com.capstone.mathuto.questions.QuestionEight
 import com.capstone.mathuto.questions.QuestionEight.CORRECT_ANS
+import com.capstone.mathuto.questions.QuestionEight.SELECTED_ANSWERS
 import com.capstone.mathuto.questions.QuestionEight.TOTAL_QUESTIONS
+import com.capstone.mathuto.questions.QuestionEight.UNANSWERED_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.WRONG_ANS
-import com.capstone.mathuto.questions.QuestionSeven
+import com.capstone.mathuto.sqlite.Question
+import com.capstone.mathuto.sqlite.SQLiteHelper
 
 class QuizEight : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityQuizEightBinding
+    private lateinit var selectedAnswer: ArrayList<Int>
+    private lateinit var db: SQLiteHelper
 
     private var mCurrentPosition: Int = 1
-    private var mQuestionList: ArrayList<QuestionMultipleChoice>? = null
+    private var mQuestionList: ArrayList<Question>? = null
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
     private var mWrongAnswers: Int = 0
+    private var mUnansweredQuestion: Int = 0
     private var areOptionsEnabled = true
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
+    private var remainingTime: Long = 60000
+
+    private var seCorrect: MediaPlayer? = null
+    private var seWrong: MediaPlayer? = null
+    private var seBackgroundMusic: MediaPlayer? = null
+    private var isBackgroundMusicPlaying: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityQuizEightBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        db = SQLiteHelper(this)
+
+        seCorrect = MediaPlayer.create(this, R.raw.sound_effect_correct)
+        seWrong = MediaPlayer.create(this, R.raw.sound_effect_wrong)
+        seBackgroundMusic = MediaPlayer.create(this, R.raw.sound_background_music)
 
         binding.tvOptionOne.setOnClickListener(this)
         binding.tvOptionTwo.setOnClickListener(this)
@@ -49,24 +67,57 @@ class QuizEight : AppCompatActivity(), View.OnClickListener {
         mQuestionList = QuestionEight.getQuestions()
         mQuestionList?.shuffle()
         setQuestion()
+
+        selectedAnswer = ArrayList()
+
+        seBackgroundMusic?.setOnCompletionListener {
+            if (isBackgroundMusicPlaying) {
+                seBackgroundMusic?.start()
+            }
+        }
+        startBackgroundMusic()
     }
+
+    private fun startBackgroundMusic() {
+        if (!isBackgroundMusicPlaying) {
+            seBackgroundMusic?.start()
+            isBackgroundMusicPlaying = true
+        }
+    }
+
+    private fun stopBackgroundMusic() {
+        if (isBackgroundMusicPlaying) {
+            seBackgroundMusic?.pause()
+            seBackgroundMusic?.seekTo(0)
+            isBackgroundMusicPlaying = false
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        stopBackgroundMusic()
+    }
+
 
     @SuppressLint("SetTextI18n")
     private fun setQuestion() {
         defaultOptionView()
-        if (!areOptionsEnabled) {
-            disableOptions()
-        } else {
-            enableOptions()
+        if (mCurrentPosition <= mQuestionList!!.size) {
+            timer.start()
+            if (!areOptionsEnabled) {
+                disableOptions()
+            } else {
+                enableOptions()
+            }
+            val question: Question = mQuestionList!![mCurrentPosition - 1]
+            binding.progressBar.progress = mCurrentPosition
+            binding.tvProgress.text = "Question $mCurrentPosition/${binding.progressBar.max}"
+            binding.tvQuestion.text = question.question
+            binding.tvOptionOne.text = question.optionA
+            binding.tvOptionTwo.text = question.optionB
+            binding.tvOptionThree.text = question.optionC
+            binding.tvOptionFour.text = question.optionD
         }
-        val question: QuestionMultipleChoice = mQuestionList!![mCurrentPosition - 1]
-        binding.progressBar.progress = mCurrentPosition
-        binding.tvProgress.text = "$mCurrentPosition /${binding.progressBar.max}"
-        binding.tvQuestion.text = question.question
-        binding.tvOptionOne.text = question.optionOne
-        binding.tvOptionTwo.text = question.optionTwo
-        binding.tvOptionThree.text = question.optionThree
-        binding.tvOptionFour.text = question.optionFour
     }
 
     private fun disableOptions() {
@@ -140,21 +191,42 @@ class QuizEight : AppCompatActivity(), View.OnClickListener {
 
     private fun processOptionSelected() {
         areOptionsEnabled = false
+        timer.cancel()
         disableOptions()
         val question = mQuestionList?.get(mCurrentPosition - 1)
+        selectedAnswer.add(mSelectedOptionPosition)
         if (question!!.correctAnswer != mSelectedOptionPosition) {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
+            seWrong?.start()
+            mQuestionList
         } else {
             mCorrectAnswers++
+            seCorrect?.start()
         }
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mQuestionList!!.size) {
             handler.postDelayed({
-                val intent = Intent(applicationContext, QuizResult::class.java)
+                val intent = Intent(applicationContext, QuizResult8::class.java)
+                seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
-                intent.putExtra(WRONG_ANS,mQuestionList!!.size - mCorrectAnswers)
-                intent.putExtra(TOTAL_QUESTIONS, mQuestionList?.size)
+
+                val scores = db.getAllHighScores()
+                if(scores.isEmpty()){
+                    db.insertHighScores("Lesson 8", mCorrectAnswers.toString())
+                }else{
+                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
+                        db.updateHighScores("Lesson 8", mCorrectAnswers.toString())
+                }
+
+                if(mCorrectAnswers >= 6) {
+                    QUIZ8_PASSED = true
+                }
+                intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
+                intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
+                intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
+                intent.putExtra(CORRECT_ANS, mCorrectAnswers)
+                intent.putIntegerArrayListExtra(SELECTED_ANSWERS, selectedAnswer)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)
@@ -187,6 +259,24 @@ class QuizEight : AppCompatActivity(), View.OnClickListener {
                 binding.tvOptionFour.background = ContextCompat.getDrawable(
                     this, drawableView)
             }
+        }
+    }
+
+    private val timer = object : CountDownTimer(remainingTime, 1000) {
+        @SuppressLint("SetTextI18n")
+        override fun onTick(millisUntilFinished: Long) {
+            remainingTime = millisUntilFinished
+            val seconds = millisUntilFinished / 1000
+            val minutes = seconds / 60
+            val remainingSeconds = seconds % 60
+            binding.tvTimer.text = "Time Left: ${minutes}:${String.format("%02d", remainingSeconds)}"
+        }
+
+        override fun onFinish() {
+            mCurrentPosition++
+            areOptionsEnabled = true
+            setQuestion()
+            seWrong?.start()
         }
     }
 }

@@ -14,11 +14,71 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mathuto"
         tools:targetApi="31">
+
+
+
         <activity
             android:name=".MainScoresActivity"
             android:exported="false" />
+
+
+
         <activity
-            android:name=".QuizResultSummaryActivity"
+            android:name=".QuizResultSummaryActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity6"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity7"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity8"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity9"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity10"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity11"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity12"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity13"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity14"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity15"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity16"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity17"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity18"
+            android:exported="false" />
+        <activity
+            android:name=".QuizResultSummaryActivity19"
             android:exported="false" />
 
         <service
@@ -87,6 +147,10 @@
         <activity
             android:name=".watch.ModuleOne"
             android:exported="false" />
+
+
+
+
         <activity
             android:name=".quiz.QuizOne"
             android:exported="false" />
@@ -141,6 +205,69 @@
         <activity
             android:name=".quiz.QuizNineteen"
             android:exported="false" />
+
+
+
+        <activity
+            android:name=".quiz.QuizResult1"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult2"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult3"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult4"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult5"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult6"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult7"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult8"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult9"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult10"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult11"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult12"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult13"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult14"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult15"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult16"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult17"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult18"
+            android:exported="false" />
+        <activity
+            android:name=".quiz.QuizResult19"
+            android:exported="false" />
+
+
+
         <activity
             android:name=".timer.QuizTimer1"
             android:exported="false" />
@@ -198,6 +325,10 @@
         <activity
             android:name=".timer.QuizTimer19"
             android:exported="false" />
+
+
+
+
         <activity
             android:name=".lessons.Lesson1"
             android:exported="false" />
@@ -255,9 +386,11 @@
         <activity
             android:name=".lessons.Lesson19"
             android:exported="false" />
-        <activity
-            android:name=".quiz.QuizResult"
-            android:exported="false" />
+
+
+
+
+
         <activity
             android:name=".menu.IntroductoryMessage"
             android:exported="false" />
@@ -267,6 +400,9 @@
         <activity
             android:name=".menu.DevelopmentTeam"
             android:exported="false" />
+
+
+
         <activity
             android:name=".About"
             android:exported="false" />

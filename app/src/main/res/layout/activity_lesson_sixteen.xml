@@ -29,8 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </androidx.appcompat.widget.Toolbar>
-
-
     <ScrollView
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
@@ -78,12 +76,10 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
-
                     <TextView
                         android:id="@+id/tv_lessons_description_one"
                         android:layout_width="match_parent"
@@ -92,7 +88,6 @@
                         android:fontFamily="@font/poppins_regular"
                         android:padding="10dp"
                         android:text="How are you doing, Kids? Have you learned a lot in the previous module? I am so glad to hear that. Mathematics is sometimes challenging but I know you can brave it all. This module will help you understand how to divide decimals up to 2 decimal places by 10, 100 and 1000. Sounds interesting, right? Read each part of this module and do the tasks in store for you. Have fun while doing the activities. Are you excited to start reading, answering, and accomplishing the tasks in this module? Get ready and your learning adventure starts now!" />
-
                     <TextView
                         android:text="Example:"
                         android:padding="10dp"
@@ -139,7 +134,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_new"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -150,25 +145,27 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:layout_marginTop="10dp"
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_two"
                         android:layout_marginTop="10dp"
                         android:text="Do you miss the normal days we have before the pandemic arises? I miss it too. I miss those times that I can play freely in my neighbour’s backyard, taking a meal in my favorite fast food chain, going to the church, and of course going to school and playing with my classmates. Let me ask you some questions. Every time you go to school, how much allowance do your parents give you? Did you spend it wisely? Wow, that is amazing!"
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_three"
                         android:layout_marginTop="10dp"
                         android:text="Read and understand this problem.\n\nAna have Php 1 500.75 in her piggy bank and she wants to divide her money by 10, 100 and 1000."
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_four"
                         android:text="She solved it and arrived with this correct answer."
                         android:padding="10dp"
                         android:textColor="@color/black"
@@ -176,6 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_five"
                         android:layout_marginTop="10dp"
                         android:text="Php 1 500.75 ÷ 10 = 150.075\n\nPhp 1 500.75 ÷ 100 = 15.0075\n\nPhp 1 500.75 ÷ 1000 = 1.50075"
                         android:fontFamily="@font/poppins_regular"
@@ -189,6 +187,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_six"
                         android:layout_marginTop="10dp"
                         android:text="a. What happens to the decimal point?\n\nb. What direction does it move?\n\nc. Is there a pattern of the movement of the decimal point?"
                         android:fontFamily="@font/poppins_regular"
@@ -227,7 +226,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_what_is_it"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -245,12 +244,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_seven"
                         android:layout_marginTop="10dp"
                         android:text="To divide decimals by 10, 100, and 1000 mentally, move the decimal point to the left as many zeros are there in the divisor. Add zero (0) before the decimal point if needed."
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_eight"
                         android:layout_marginTop="10dp"
                         android:text="a. Dividing by 10 - move one place to the left\n1 500.75 ÷ 10 = 150.075\n1 5 0 0 . 7 5\n\nb. Dividing by 100 – move two (2) places to the left\n1 500.75 ÷ 100 = 15.0075\n1 5 0 0 . 7 5\n\nc. Dividing by 1000 – move three (3) places to the left\n1500.75 ÷ 1000 = 1.500.75\n1 5 0 0 . 7 5"
                         android:fontFamily="@font/poppins_regular"
@@ -264,6 +265,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_nine"
                         android:layout_marginTop="10dp"
                         android:text="1.) 332.67 ÷ 10 = 33.267\n3 3 2 . 6 7\n\n2.) 469.15 ÷ 100 = 4.6915\n4 6 9 . 1 5\n\n3.) 52 987.1 ÷ 1000 = 52.9871\n5 2 9 8 7 . 1"
                         android:fontFamily="@font/poppins_regular"

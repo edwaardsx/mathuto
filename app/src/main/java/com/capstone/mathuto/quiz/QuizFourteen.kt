@@ -4,36 +4,47 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.capstone.mathuto.questions.QuestionOne
+import com.capstone.mathuto.Main.Companion.QUIZ14_PASSED
 import com.capstone.mathuto.R
-import com.capstone.mathuto.databinding.ActivityQuizFiveBinding
 import com.capstone.mathuto.databinding.ActivityQuizFourteenBinding
-import com.capstone.mathuto.databinding.ActivityQuizOneBinding
-import com.capstone.mathuto.questions.QuestionFive
 import com.capstone.mathuto.questions.QuestionFourteen
 import com.capstone.mathuto.questions.QuestionFourteen.CORRECT_ANS
+import com.capstone.mathuto.questions.QuestionFourteen.SELECTED_ANSWERS
 import com.capstone.mathuto.questions.QuestionFourteen.TOTAL_QUESTIONS
+import com.capstone.mathuto.questions.QuestionFourteen.UNANSWERED_QUESTIONS
 import com.capstone.mathuto.questions.QuestionOne.WRONG_ANS
+import com.capstone.mathuto.sqlite.SQLiteHelper
 
 class QuizFourteen : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityQuizFourteenBinding
+    private lateinit var selectedAnswer: ArrayList<Int>
+    private lateinit var db: SQLiteHelper
 
     private var mCurrentPosition: Int = 1
     private var mQuestionList: ArrayList<QuestionTrueFalse>? = null
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
     private var mWrongAnswers: Int = 0
+    private var mUnansweredQuestion: Int = 0
     private var areOptionsEnabled = true
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
+    private var remainingTime: Long = 60000
+
+    private var seCorrect: MediaPlayer? = null
+    private var seWrong: MediaPlayer? = null
+    private var seBackgroundMusic: MediaPlayer? = null
+    private var isBackgroundMusicPlaying: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,28 +52,67 @@ class QuizFourteen : AppCompatActivity(), View.OnClickListener {
         binding = ActivityQuizFourteenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        db = SQLiteHelper(this)
+
+        seCorrect = MediaPlayer.create(this, R.raw.sound_effect_correct)
+        seWrong = MediaPlayer.create(this, R.raw.sound_effect_wrong)
+        seBackgroundMusic = MediaPlayer.create(this, R.raw.sound_background_music)
+
         binding.tvOptionOne.setOnClickListener(this)
         binding.tvOptionTwo.setOnClickListener(this)
 
         mQuestionList = QuestionFourteen.getQuestions()
         mQuestionList?.shuffle()
         setQuestion()
+
+        selectedAnswer = ArrayList()
+
+        seBackgroundMusic?.setOnCompletionListener {
+            if (isBackgroundMusicPlaying) {
+                seBackgroundMusic?.start()
+            }
+        }
+        startBackgroundMusic()
     }
+
+    private fun startBackgroundMusic() {
+        if (!isBackgroundMusicPlaying) {
+            seBackgroundMusic?.start()
+            isBackgroundMusicPlaying = true
+        }
+    }
+
+    private fun stopBackgroundMusic() {
+        if (isBackgroundMusicPlaying) {
+            seBackgroundMusic?.pause()
+            seBackgroundMusic?.seekTo(0)
+            isBackgroundMusicPlaying = false
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        stopBackgroundMusic()
+    }
+
 
     @SuppressLint("SetTextI18n")
     private fun setQuestion() {
         defaultOptionView()
-        if (!areOptionsEnabled) {
-            disableOptions()
-        } else {
-            enableOptions()
+        if (mCurrentPosition <= mQuestionList!!.size) {
+            timer.start()
+            if (!areOptionsEnabled) {
+                disableOptions()
+            } else {
+                enableOptions()
+            }
+            val question: QuestionTrueFalse = mQuestionList!![mCurrentPosition - 1]
+            binding.progressBar.progress = mCurrentPosition
+            binding.tvProgress.text = "Question $mCurrentPosition/${binding.progressBar.max}"
+            binding.tvQuestion.text = question.question
+            binding.tvOptionOne.text = question.optionOne
+            binding.tvOptionTwo.text = question.optionTwo
         }
-        val question: QuestionTrueFalse = mQuestionList!![mCurrentPosition - 1]
-        binding.progressBar.progress = mCurrentPosition
-        binding.tvProgress.text = "$mCurrentPosition /${binding.progressBar.max}"
-        binding.tvQuestion.text = question.question
-        binding.tvOptionOne.text = question.optionOne
-        binding.tvOptionTwo.text = question.optionTwo
     }
 
     private fun disableOptions() {
@@ -118,21 +168,42 @@ class QuizFourteen : AppCompatActivity(), View.OnClickListener {
 
     private fun processOptionSelected() {
         areOptionsEnabled = false
+        timer.cancel()
         disableOptions()
         val question = mQuestionList?.get(mCurrentPosition - 1)
+        selectedAnswer.add(mSelectedOptionPosition)
         if (question!!.correctAnswer != mSelectedOptionPosition) {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
+            seWrong?.start()
+            mQuestionList
         } else {
             mCorrectAnswers++
+            seCorrect?.start()
         }
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mQuestionList!!.size) {
             handler.postDelayed({
-                val intent = Intent(applicationContext, QuizResult::class.java)
+                val intent = Intent(applicationContext, QuizResult14::class.java)
+                seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
-                intent.putExtra(WRONG_ANS,mQuestionList!!.size - mCorrectAnswers)
-                intent.putExtra(TOTAL_QUESTIONS, mQuestionList?.size)
+
+                val scores = db.getAllHighScores()
+                if(scores.isEmpty()){
+                    db.insertHighScores("Lesson 14", mCorrectAnswers.toString())
+                }else{
+                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
+                        db.updateHighScores("Lesson 14", mCorrectAnswers.toString())
+                }
+
+                if(mCorrectAnswers >= 6) {
+                    QUIZ14_PASSED = true
+                }
+                intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
+                intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
+                intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
+                intent.putExtra(CORRECT_ANS, mCorrectAnswers)
+                intent.putIntegerArrayListExtra(SELECTED_ANSWERS, selectedAnswer)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)
@@ -157,6 +228,24 @@ class QuizFourteen : AppCompatActivity(), View.OnClickListener {
                 binding.tvOptionTwo.background = ContextCompat.getDrawable(
                     this, drawableView)
             }
+        }
+    }
+
+    private val timer = object : CountDownTimer(remainingTime, 1000) {
+        @SuppressLint("SetTextI18n")
+        override fun onTick(millisUntilFinished: Long) {
+            remainingTime = millisUntilFinished
+            val seconds = millisUntilFinished / 1000
+            val minutes = seconds / 60
+            val remainingSeconds = seconds % 60
+            binding.tvTimer.text = "Time Left: ${minutes}:${String.format("%02d", remainingSeconds)}"
+        }
+
+        override fun onFinish() {
+            mCurrentPosition++
+            areOptionsEnabled = true
+            setQuestion()
+            seWrong?.start()
         }
     }
 }

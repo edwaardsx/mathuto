@@ -76,7 +76,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
-                        android:id="@+id/tv_lessons_description_one"
+                        android:id="@+id/tv_description_one"
                         android:padding="16dp"
                         android:text="Problem Solving requires an imaginative mind to be able to arrive at an answer easily and systematically. More so, solving mathematical word problem  effectively depends not only on student’s ability to perform the required mathematical operations but also on the extent to which they are able to accurately understand the text of the word problem."
                         android:fontFamily="@font/poppins_regular"
@@ -90,6 +90,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_description_two"
                         android:padding="16dp"
                         android:text="Yael walked one-half of a kilometer yesterday and three-fourths of a kilometer today. How many miles has Yael walked? \n\nSolution\n\nThis word problem requires addition of fractions Choosing a common denominator of 4, we get\n\n1/2 + 3/4 = 2/4 = 3/4 = 5/4 𝑜𝑟 1 ¼\n\nSo, Yael walked a total of 1 1 4 kilometers"
                         android:fontFamily="@font/poppins_regular"
@@ -108,6 +109,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_description_three"
                         android:padding="16dp"
                         android:text="Mother bought three and one-third dozen apples. She served three-fourths of the apples to Rico’s friends. How many apples remained?\n\nSolution\n\nThis word problem requires subtraction of fractions\n\nChoosing a common denominator of 12, we get:\n\n3 1/3 – 1/3 = 10/3 – 3/4 = 40/12 – 9/12 = 31/12 = 2 7/12\n\nSo, there were 2 7/12 apples remained."
                         android:fontFamily="@font/poppins_regular"
@@ -153,7 +155,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_in"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -164,14 +166,13 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:layout_marginTop="10dp"
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
-                        android:id="@+id/tv_whats_is_it_one"
+                        android:id="@+id/tv_description_four"
                         android:layout_marginTop="10dp"
                         android:text="In this lesson, you will use your understanding of the previous topic to solve problems involving addition and subtraction of fractions. Using an illustration is a great help to answer some problems.\n\nDeeper understanding of the text of the word problem serves as a crucial step before mathematical computations can be performed. Hence, it is very important to teach the learners the process of solving word-based problems."
                         android:fontFamily="@font/poppins_regular"
@@ -211,7 +212,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_new"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -222,14 +223,13 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:layout_marginTop="10dp"
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
-                        android:id="@+id/tv_whats_in"
+                        android:id="@+id/tv_description_five"
                         android:layout_marginTop="10dp"
                         android:text="Here are some word-based questions which involve addition and subtraction of fractions for you to work on. Learn about adding and subtracting word problems as you apply your fractions skills. Let’s see how you solve the problems correctly.\n\nDirections: Solve Problems 1 &amp; 2 below. Be sure to simplify your result, if necessary.\n\nProblem 1: Word Problems Involving Subtraction of Fractions\n\nFrom a 1-meter ribbon, Ericka cut 2/4 meters for her hat and another 1/4 meter for her bag. How long was the remaining piece?\n\nProblem 2: Word Problems Involving Addition of Fractions\n\nJepoy drove his bicycle for 1/3 km going to his friend’s house. Then, he proceeded for another 2/4 km to his cousin. He drove another 1/6 km on his way home. How far did he cover from his friend’s house to his house?"
                         android:fontFamily="@font/poppins_regular"
@@ -269,7 +269,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_what_is_it"
+                            android:id="@+id/btn_tts4"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -280,14 +280,13 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:layout_marginTop="10dp"
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
-
+                        android:id="@+id/tv_description_six"
                         android:layout_marginTop="10dp"
                         android:text="Getting mess of the word-based problems? Well, it’s not easy to solve word problems. But there are as many solutions in solving problems as there many ways in killing the cat. Of course, it is going to be easy if you follow the steps in solving word problems. Here’s how!\n\nLet us solve the problem by following the steps below."
                         android:fontFamily="@font/poppins_regular"
@@ -300,14 +299,13 @@
                         android:fontFamily="@font/poppins_semi_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-
                     <TextView
+                        android:id="@+id/tv_description_seven"
                         android:layout_marginTop="10dp"
                         android:text="a. What is asked?\n\nThe length of the remaining piece of ribbon.\n\nb. What are given?\n\n2/4 meters for her hat\n\n1/4 meters for her bag"
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-
                     <TextView
                         android:text="Plan:"
                         android:padding="10dp"
@@ -315,14 +313,13 @@
                         android:fontFamily="@font/poppins_semi_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-
                     <TextView
+                        android:id="@+id/tv_description_eight"
                         android:layout_marginTop="10dp"
                         android:text="What operation will you use?\n\nUsing Bar Model"
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-
                     <com.ortiz.touchview.TouchImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -336,18 +333,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_description_nine"
                         android:layout_marginTop="10dp"
                         android:text="a. Solve.\n\n1. Add the fractions of ribbons used for hat and bag.\n\n2/4 + 1/4 = ¾\n\n2. Subtract it from 1 meter or 4/4 ribbons.\n\n4/4 – 3/4 = ¼\n\nb. Give the complete answer.\n\nTherefore, Ericka has a remaining 1/4 meter of ribbon.\n\nCHECK\n\nCheck if the answer is correct\n\n2/4 + 1/4 + 1/4 = 4/4 𝑜𝑟 1"
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-
-
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-
-
 
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"

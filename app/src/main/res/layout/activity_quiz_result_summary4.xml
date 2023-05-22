@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#303030"
     android:orientation="vertical"
-    tools:context=".QuizResultSummaryActivity">
+    tools:context=".QuizResultSummaryActivity4">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

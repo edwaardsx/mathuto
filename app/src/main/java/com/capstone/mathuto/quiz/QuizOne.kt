@@ -30,6 +30,8 @@ import com.capstone.mathuto.sqlite.SQLiteHelper
 class QuizOne : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityQuizOneBinding
+    private lateinit var selectedAnswer: ArrayList<Int>
+    private lateinit var db: SQLiteHelper
 
     private var mCurrentPosition: Int = 1
     private var mQuestionList: ArrayList<Question>? = null
@@ -41,22 +43,20 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
-    private var remainingTime: Long = 30000
+    private var remainingTime: Long = 60000
 
     private var seCorrect: MediaPlayer? = null
     private var seWrong: MediaPlayer? = null
     private var seBackgroundMusic: MediaPlayer? = null
     private var isBackgroundMusicPlaying: Boolean = false
-    private lateinit var selectedAnswer: ArrayList<Int>
-
-    lateinit var db: SQLiteHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        db = SQLiteHelper(this);
 
         binding = ActivityQuizOneBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        db = SQLiteHelper(this)
 
         binding.tvOptionOne.setOnClickListener(this)
         binding.tvOptionTwo.setOnClickListener(this)
@@ -71,7 +71,7 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         mQuestionList?.shuffle()
         setQuestion()
 
-        selectedAnswer = ArrayList<Int>()
+        selectedAnswer = ArrayList()
 
         seBackgroundMusic?.setOnCompletionListener {
             if (isBackgroundMusicPlaying) {
@@ -128,7 +128,6 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         binding.tvOptionThree.isEnabled = false
         binding.tvOptionFour.isEnabled = false
     }
-
     private fun enableOptions() {
         binding.tvOptionOne.isEnabled = true
         binding.tvOptionTwo.isEnabled = true
@@ -192,18 +191,15 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun processOptionSelected() {
-
         areOptionsEnabled = false
         timer.cancel()
         disableOptions()
         val question = mQuestionList?.get(mCurrentPosition - 1)
         selectedAnswer.add(mSelectedOptionPosition)
-
         if (question!!.correctAnswer != mSelectedOptionPosition) {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
             seWrong?.start()
-
             mQuestionList
         } else {
             mCorrectAnswers++
@@ -212,23 +208,21 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mQuestionList!!.size) {
             handler.postDelayed({
-                val intent = Intent(applicationContext, QuizResult::class.java)
+                val intent = Intent(applicationContext, QuizResult1::class.java)
                 seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
-
 
                 val scores = db.getAllHighScores()
                 if(scores.isEmpty()){
                     db.insertHighScores("Lesson 1", mCorrectAnswers.toString())
                 }else{
-                    if (mCorrectAnswers > Integer.parseInt(scores.get(0).score))
+                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
                         db.updateHighScores("Lesson 1", mCorrectAnswers.toString())
                 }
 
                 if(mCorrectAnswers >= 6) {
                     QUIZ1_PASSED = true
                 }
-
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
                 intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))

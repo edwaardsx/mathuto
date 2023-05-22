@@ -64,15 +64,29 @@ class Lesson7 : AppCompatActivity(), TextToSpeech.OnInitListener {
             val lessonDescriptions = "$text $text2 $text3"
             if (lessonDescriptions.isNotEmpty()) {
                 if (isReadingAloud) {
-                    // Stop reading aloud
                     tts.stop()
                     isReadingAloud = false
                     binding.btnTts.text = "Read"
                 } else {
-                    // Start reading aloud
                     tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop"
+                }
+            }
+        }
+        binding.btnTts2.setOnClickListener {
+            val text4 = binding.tvLessonsDescriptionFour.text.toString()
+            val text5 = binding.tvLessonsDescriptionFive.text.toString()
+            val lessonDescriptions = "$text4 $text5"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts2.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts2.text = "Stop"
                 }
             }
         }

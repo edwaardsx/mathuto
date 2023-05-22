@@ -78,12 +78,10 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
-
                     <TextView
                         android:id="@+id/tv_lessons_description_one"
                         android:layout_width="match_parent"
@@ -138,7 +136,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_new"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -156,6 +154,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_two"
                         android:layout_marginTop="10dp"
                         android:text="Excellent! You have learned a lot in the previous module. Keep it up.\n\nEduard is a grade 6 pupil. He is very observant. He pays a lot of attention and notices of everything around him.\n\nAre you a keen observer like Eduard? If you are, then answer the following questions by observing the movement of the decimal point in the following number sentences.\n\n8.6253 ÷ 0.1 = 86.253\n\n8.6253 ÷ 0.01 = 862.53\n\n8.6253 ÷ 0.001 = 8 625.3\n\na. What happens to the decimal point?\n\nb. What direction does it move?\n\nc. Is there a pattern of movement in the decimal point?"
                         android:fontFamily="@font/poppins_regular"
@@ -194,7 +193,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_what_is_it"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -212,12 +211,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_three"
                         android:layout_marginTop="10dp"
                         android:text="In dividing decimals by 0.1, 0.01, 0.001..., move the decimal point to the right as many times as the number of decimal places of the number in the dividend. Place a zero (0) if the decimal point has moved to a decimal place without a digit."
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_four"
                         android:layout_marginTop="10dp"
                         android:text="• Dividing by 0.1 - move one place to the right\n▪ 8.6253 ÷ 0.1 = 86.253\n8 . 6 2 5 3\n\n• Dividing by 0.01 – move two (2) places to the right\n▪ 8.6253 ÷ 0.01 = 862.53\n8 . 6 2 5 3\n\n• Dividing by 0.001 – move three (3) places to the right\n▪ 8.6253 ÷ 0.001 = 8625.3\n8 . 6 2 5 3\n\nHere are some examples:\n▪ 43.657 ÷ 10 = 436.57\n4 3 . 6 5 7\n▪ 21.894 ÷ 100 =2 189.4\n▪ 21.894 ÷ 100 =2 189.4\n▪ 6.36 ÷ 1000 = 6 360\n\n6 . 3 6 0 add zero if needed"
                         android:fontFamily="@font/poppins_regular"

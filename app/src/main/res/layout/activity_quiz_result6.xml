@@ -6,7 +6,7 @@
     android:background="#303030"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.QuizResult">
+    tools:context=".quiz.QuizResult6">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -37,7 +37,6 @@
         android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -53,14 +52,14 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <!--<TextView
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="QUIZ RESULT:"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:fontFamily="@font/poppins_semi_bold"
-                        android:textAlignment="viewStart"/>-->
+                        android:textAlignment="viewStart"/>
                     <com.github.mikephil.charting.charts.PieChart
                         android:id="@+id/pie_chart"
                         android:layout_gravity="center"
@@ -107,7 +106,6 @@
                                 android:layout_height="match_parent"/>
                         </LinearLayout>
                         </LinearLayout>
-
                         <LinearLayout
                             android:orientation="vertical"
                             android:gravity="center"
@@ -214,7 +212,7 @@
                     android:id="@+id/btn_main_menu"
                     android:fontFamily="@font/poppins_semi_bold"
                     android:background="@drawable/btn_primary_button"
-                    android:text="Main Menu"
+                    android:text="Finish"
                     android:textColor="@color/white"
                     android:layout_marginStart="8dp"
                     android:layout_width="0dp"

@@ -105,8 +105,6 @@
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-
             <androidx.cardview.widget.CardView
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp"
@@ -138,7 +136,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_2"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:fontFamily="@font/poppins_semi_bold"
                             android:background="@drawable/btn_secondary_button"
@@ -235,7 +233,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_3"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:fontFamily="@font/poppins_semi_bold"
                             android:background="@drawable/btn_secondary_button"

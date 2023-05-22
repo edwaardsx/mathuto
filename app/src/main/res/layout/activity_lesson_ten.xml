@@ -29,7 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </androidx.appcompat.widget.Toolbar>
-
     <ScrollView
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
@@ -103,7 +102,6 @@
                         android:src="@drawable/smple_mod101"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
             <androidx.cardview.widget.CardView
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp"
@@ -135,7 +133,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_in"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -153,6 +151,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_two"
                         android:layout_marginTop="10dp"
                         android:text="In the previous lesson, you learned a lot about multiplying decimals and mixed decimals with factors up to two decimal places. "
                         android:fontFamily="@font/poppins_regular"
@@ -172,7 +171,6 @@
                         android:src="@drawable/smple_mod10"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
             <androidx.cardview.widget.CardView
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp"
@@ -204,7 +202,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_new"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -222,6 +220,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_three"
                         android:layout_marginTop="10dp"
                         android:text="We have just started and we feel how interested you are to learn the content of this module. We hope that you keep it up for you to accomplish all the activities and exercises of this lesson. It is time to proceed to the next activity.\n\n Lace for the Blouse Read and understand the problem.\n\nLilia was asked by her mother to buy 10 meters of lace for her blouse and 100 meters of the same lace for the dresses that her mother sew. Each meter costs ₱ 8.45. She made a table to show the data of her problem."
                         android:fontFamily="@font/poppins_regular"
@@ -240,12 +239,14 @@
                         android:contentDescription="example"
                         android:src="@drawable/smple_010"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_four"
                         android:layout_marginTop="10dp"
                         android:text="Solution 1:\n\n₱ 8.45 x 10 = ₱ 84.5 She moved the decimal point one place to the right because 10 has only one zero. So, she paid the cashier ₱ 84.50 for the 10m of lace."
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_five"
                         android:layout_marginTop="10dp"
                         android:text="Solution 2:\n\n₱ 8.45 x 100 = ₱ 845 She moved the decimal point two places to the right because 100 has two zeros. So, she paid the cashier ₱ 845 for the 100 m of lace."
                         android:fontFamily="@font/poppins_regular"

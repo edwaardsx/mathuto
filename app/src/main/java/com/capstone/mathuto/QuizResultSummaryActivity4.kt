@@ -9,26 +9,28 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.capstone.mathuto.databinding.ActivityQuizResultSummaryBinding
+import com.capstone.mathuto.databinding.ActivityQuizResultSummary4Binding
+import com.capstone.mathuto.questions.QuestionFour
 import com.capstone.mathuto.questions.QuestionOne
+import com.capstone.mathuto.quiz.QuestionTrueFalse
 import com.capstone.mathuto.sqlite.Question
 
-class QuizResultSummaryActivity : AppCompatActivity() {
+class QuizResultSummaryActivity4 : AppCompatActivity() {
 
-    private lateinit var binding: ActivityQuizResultSummaryBinding
+    private lateinit var binding: ActivityQuizResultSummary4Binding
 
     private var mCurrentPosition: Int = 1
-    private var mQuestionList: ArrayList<Question>? = null
+    private var mQuestionList: ArrayList<QuestionTrueFalse>? = null
 
     private var isBackButtonVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityQuizResultSummaryBinding.inflate(layoutInflater)
+        binding = ActivityQuizResultSummary4Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mQuestionList = QuestionOne.getQuestions()
+        mQuestionList = QuestionFour.getQuestions()
         mQuestionList?.shuffle()
         setQuestion()
 
@@ -88,16 +90,14 @@ class QuizResultSummaryActivity : AppCompatActivity() {
         defaultOptionView()
 
         val bundle = intent.extras
-        val myIntArray = bundle!!.getIntegerArrayList(QuestionOne.SELECTED_ANSWERS)
+        val myIntArray = bundle!!.getIntegerArrayList(QuestionFour.SELECTED_ANSWERS)
 
         if (mCurrentPosition < mQuestionList!!.size) {
-            val question: Question = mQuestionList!![mCurrentPosition - 1]
+            val question: QuestionTrueFalse = mQuestionList!![mCurrentPosition - 1]
             binding.tvProgress.text = "Question $mCurrentPosition"
             binding.tvQuestion.text = question.question
-            binding.tvOptionOne.text = question.optionA
-            binding.tvOptionTwo.text = question.optionB
-            binding.tvOptionThree.text = question.optionC
-            binding.tvOptionFour.text = question.optionD
+            binding.tvOptionOne.text = question.optionOne
+            binding.tvOptionTwo.text = question.optionTwo
 
             if (myIntArray != null) {
                 if(myIntArray[mCurrentPosition] != question.correctAnswer){

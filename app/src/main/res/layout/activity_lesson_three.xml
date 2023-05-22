@@ -78,12 +78,10 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
-
                     <TextView
                         android:id="@+id/tv_lessons_description_one"
                         android:layout_width="match_parent"
@@ -92,7 +90,6 @@
                         android:fontFamily="@font/poppins_regular"
                         android:padding="10dp"
                         android:text="Multiplication is repeated addition. The cross (x) and the dot (.) are the symbols for multiplication. Between these symbols, the x is commonly used in multiplying fractions.\n\nWith the aid of this module you will discover the varied methods in multiplying fractions. There are different ways in finding the product. Whatever method you are going to use, still you will arrive at the same correct answer.\n\nThis module will help you multiply fractions easily. Let us get started! But, you need to review first your previous lesson in order for you to fully understand the lesson in this module." />
-
                     <TextView
                         android:text="Illustration:"
                         android:padding="10dp"
@@ -139,7 +136,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_new"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -150,20 +147,18 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:layout_marginTop="10dp"
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
-                        android:id="@+id/tv_whats_in"
+                        android:id="@+id/tv_lessons_description_two"
                         android:layout_marginTop="10dp"
                         android:text="How are you, learner? How do you feel while answering the test in What I Know? This time, you have to review the basic skills needed in multiplying fractions. It will help you perform the different learning tasks.\n\nDirections: Study the given example in every activity. Give the answer by following the instructions.\n\nA. Change mixed fraction to improper fraction\n\nExample: 3 1/2 = 7/2\n\n1) 4 1/2 =\n\n2) 2\n\n3/4 = 3) 1 2//5 =\n\nB. Change improper fraction to mixed fraction.\n\nExample:7/2 = 3 ½\n\n1)8/3 = 2)10/9 = 3)20/7 =\n\nC. Reduce to lowest term.\n\n1) 5/15 =\n\n2) 9/12 =\n\n3) 8/10 ="
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -198,7 +193,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_is_it"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -209,14 +204,13 @@
                             android:layout_weight=".5"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
-
                     <ImageView
                         android:layout_marginTop="10dp"
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
-                        android:id="@+id/tv_whats_it_is"
+                        android:id="@+id/tv_lessons_description_three"
                         android:layout_marginTop="10dp"
                         android:text="Hello, learner! Are you willing to learn more using this module? Come on! Let us study the different examples. This lesson will give you more ideas on how to multiply fraction with whole number, simple fraction, and mixed fraction. The presentation of the solving process will guide you in finding the answer in simple form. After studying the examples, answer the questions that follow."
                         android:fontFamily="@font/poppins_regular"
@@ -234,26 +228,29 @@
                         android:layout_height="match_parent"
                         android:contentDescription="example"
                         android:src="@drawable/smple_03"/>
-
                     <TextView
+                        android:id="@+id/tv_lessons_description_four"
                         android:layout_marginTop="10dp"
                         android:text="1/8 x 3\n\n= 1/8 x 3 =3 Multiply the numerator and the whole number. \n\n= 1/8 x 3 = 3/8 Copy the denominator."
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_five"
                         android:layout_marginTop="10dp"
                         android:text="3/4 x 2/3\n\n= 3/4 x 2/3 = 6/12 Multiply both numerators and denominators.\n\n= 1/2    Reduce the answer to lowest term, if possible."
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_six"
                         android:layout_marginTop="10dp"
                         android:text="4 2/3 x 2/4 \n\n= 14/3 x 2/4 Change mixed fraction to improper fraction.\n\n= 14 x 2 / 3 x 4 = 28/12 Multiply both numerators and denominators.\n\n= 28/12 = 2 4/12 Change improper fraction to mixed fraction.\n\n= 2 2/3      Reduce the answer to lowest term if possible."
                         android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_seven"
                         android:layout_marginTop="10dp"
                         android:text="2/5 x 2 2/4\n\n= 2/5 x 10/4 Change mixed fraction to improper fraction.\n\n= 2x10/5x4 = 20/20 Multiply both numerators and denominators.\n\n= 20/20 or 1 If both numerator and denominator are the same\n\nchange the fraction to 1."
                         android:fontFamily="@font/poppins_regular"

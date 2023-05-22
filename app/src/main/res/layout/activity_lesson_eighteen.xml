@@ -138,7 +138,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_in"
+                            android:id="@+id/btn_tts2"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -156,6 +156,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_two"
                         android:layout_marginTop="10dp"
                         android:text="Can you still remember how to divide a whole number with a decimal and mixed decimal? How do we divide decimals by 10, 100 or 1 000? How will we know that the quotient is a terminating or non-terminating?"
                         android:fontFamily="@font/poppins_regular"
@@ -194,7 +195,7 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"/>
                         <Button
-                            android:id="@+id/btn_tts_whats_new"
+                            android:id="@+id/btn_tts3"
                             android:text="Read"
                             android:textAlignment="textStart"
                             android:background="@drawable/btn_secondary_button"
@@ -212,6 +213,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_three"
                         android:layout_marginTop="10dp"
                         android:text="Are you excited with our new lesson? I hope you will enjoy the different activities especially prepared for you. This time, we will be learning on how to solve routine and non-routine word problem involving division of decimals, mixed decimals, and whole numbers including money by using appropriate problem solving strategies and tools. Are you ready? Let’s start\n\nI know you love to solve problems and I’m sure our topic for today will help you find problem solving easy. Let’s get it on and let’s explore!\n\nNow, let us be guided by the different steps in problem solving. Remember the acronym U P E R, where U stands for Understand, P for Plan, E for Execute and R for Review."
                         android:fontFamily="@font/poppins_regular"
@@ -232,6 +234,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_four"
                         android:layout_marginTop="10dp"
                         android:text="This is the first and the most important thing to do to go deeper into the problem. In this stage, you need to read and re-read the word problem and find out for yourself of what is really the problem since you cannot solve a problem which you do not know exactly what to solve. In this stage, no pen or paper is needed.\n\nJust bear in mind that you have to know the following:\n\n• What is asked?\n\n• What are the given facts?"
                         android:fontFamily="@font/poppins_regular"
@@ -258,6 +261,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_five"
                         android:layout_marginTop="10dp"
                         android:text="Since you already have a plan on how to find the answer to the problem, it is time for you to do the solving. Remember, your plan is flexible. You can change the strategy or strategies when it is deemed necessary."
                         android:fontFamily="@font/poppins_regular"
@@ -271,6 +275,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_six"
                         android:layout_marginTop="10dp"
                         android:text="This is the last process and you need to be very careful because it is of equal importance as with three first steps. Math wizards always look back and check their works. Go back to the problem and carefully check the processes you have gone through. Check if:\n\n• your answer sensible or practical\n\n• your estimation is applicable to check whether your answer is reasonable\n\n• you did not get the answer correctly, go back and check the process carefully to find where you have gone wrong."
                         android:fontFamily="@font/poppins_regular"
@@ -284,6 +289,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tv_lessons_description_seven"
                         android:layout_marginTop="10dp"
                         android:text="per, a, out of, ratio of, quotient of, percent (divide by 100) equal pieces, split, average, separate, each"
                         android:fontFamily="@font/poppins_regular"

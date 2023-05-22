@@ -26,8 +26,8 @@ import java.util.*
 class Lesson2 : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private lateinit var binding: ActivityLessonTwoBinding
-
     private lateinit var tts: TextToSpeech
+
     private var isReadingAloud = false
 
     @SuppressLint("SetTextI18n")
@@ -63,24 +63,71 @@ class Lesson2 : AppCompatActivity(), TextToSpeech.OnInitListener {
             overridePendingTransition(0, 0)
         }
         binding.btnTts.setOnClickListener {
-            val text = binding.tvLessonsDescriptionOne.text.toString()
-            val lessonDescriptions = "$text"
+            val text = binding.tvDescriptionOne.text.toString()
+            val text2 = binding.tvDescriptionTwo.text.toString()
+            val text3 = binding.tvDescriptionThree.text.toString()
+            val lessonDescriptions = "$text $text2 $text3"
             if (lessonDescriptions.isNotEmpty()) {
                 if (isReadingAloud) {
-                    // Stop reading aloud
                     tts.stop()
                     isReadingAloud = false
                     binding.btnTts.text = "Read"
                 } else {
-                    // Start reading aloud
                     tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop"
                 }
             }
         }
+        binding.btnTts2.setOnClickListener {
+            val text4 = binding.tvDescriptionFour.text.toString()
+            val lessonDescriptions = "$text4"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts2.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts2.text = "Stop"
+                }
+            }
+        }
+        binding.btnTts3.setOnClickListener {
+            val text5 = binding.tvDescriptionFive.text.toString()
+            val lessonDescriptions = "$text5"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts3.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts3.text = "Stop"
+                }
+            }
+        }
+        binding.btnTts4.setOnClickListener {
+            val text6 = binding.tvDescriptionSix.text.toString()
+            val text7 = binding.tvDescriptionSeven.text.toString()
+            val text8 = binding.tvDescriptionEight.text.toString()
+            val text9 = binding.tvDescriptionNine.text.toString()
+            val lessonDescriptions = "$text6 $text7 $text8 $text9"
+            if (lessonDescriptions.isNotEmpty()) {
+                if (isReadingAloud) {
+                    tts.stop()
+                    isReadingAloud = false
+                    binding.btnTts4.text = "Read"
+                } else {
+                    tts.speak(lessonDescriptions, TextToSpeech.QUEUE_FLUSH, null, null)
+                    isReadingAloud = true
+                    binding.btnTts4.text = "Stop"
+                }
+            }
+        }
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_item_lessons, menu)
