@@ -131,6 +131,7 @@ class QuizResult4 : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.activity_unlock_5)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
         dialog.show()
 
         val btnUnlockClose = dialog.findViewById<ImageButton>(R.id.btn_unlock_close)

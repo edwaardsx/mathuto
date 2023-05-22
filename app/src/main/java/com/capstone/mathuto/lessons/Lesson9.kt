@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL9
 import com.capstone.mathuto.R
 import com.capstone.mathuto.databinding.ActivityLessonNineBinding
 import com.capstone.mathuto.menu.DevelopmentTeam
@@ -45,6 +46,8 @@ class Lesson9 : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
         binding.btnWatchTutorial.setOnClickListener {
             val intent = Intent(applicationContext, ModuleNine::class.java)
+            WATCHED_TUTORIAL9 = true
+
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)

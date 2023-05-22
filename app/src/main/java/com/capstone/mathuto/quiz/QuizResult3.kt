@@ -10,16 +10,11 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.mathuto.Main
-import com.capstone.mathuto.Main.Companion.QUIZ1_PASSED
 import com.capstone.mathuto.Main.Companion.QUIZ3_PASSED
-import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL1
 import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL3
-import com.capstone.mathuto.QuizResultSummaryActivity1
 import com.capstone.mathuto.QuizResultSummaryActivity3
 import com.capstone.mathuto.R
-import com.capstone.mathuto.databinding.ActivityQuizResult1Binding
 import com.capstone.mathuto.databinding.ActivityQuizResult3Binding
-import com.capstone.mathuto.lessons.Lesson1
 import com.capstone.mathuto.lessons.Lesson3
 import com.capstone.mathuto.questions.QuestionOne.CORRECT_ANS
 import com.capstone.mathuto.questions.QuestionOne.SELECTED_ANSWERS

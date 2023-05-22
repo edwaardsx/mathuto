@@ -192,9 +192,11 @@ class QuizSix : AppCompatActivity(), View.OnClickListener {
                 val scores = db.getAllHighScores()
                 if(scores.isEmpty()){
                     db.insertHighScores("Lesson 6", mCorrectAnswers.toString())
-                }else{
-                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
+                } else if (scores.size >= 6) {
+                    val previousScore = Integer.parseInt(scores[5].score)
+                    if (mCorrectAnswers > previousScore) {
                         db.updateHighScores("Lesson 6", mCorrectAnswers.toString())
+                    }
                 }
 
                 if(mCorrectAnswers >= 6) {

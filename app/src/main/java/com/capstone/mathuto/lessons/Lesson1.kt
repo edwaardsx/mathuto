@@ -13,6 +13,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.capstone.mathuto.Main.Companion.QUIZ1_PASSED
 import com.capstone.mathuto.Main.Companion.WATCHED_TUTORIAL1
 import com.capstone.mathuto.R
 import com.capstone.mathuto.databinding.ActivityLessonOneBinding

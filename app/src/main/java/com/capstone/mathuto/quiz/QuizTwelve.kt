@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.capstone.mathuto.Main
+import com.capstone.mathuto.Main.Companion.QUIZ12_PASSED
 import com.capstone.mathuto.R
 import com.capstone.mathuto.databinding.ActivityQuizThreeBinding
 import com.capstone.mathuto.databinding.ActivityQuizTwelveBinding
@@ -206,20 +207,20 @@ class QuizTwelve : AppCompatActivity(), View.OnClickListener {
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mQuestionList!!.size) {
             handler.postDelayed({
-                val intent = Intent(applicationContext, QuizResult3::class.java)
+                val intent = Intent(applicationContext, QuizResult12::class.java)
                 seBackgroundMusic?.stop()
                 intent.putExtra(QuestionThree.CORRECT_ANS, mCorrectAnswers)
 
                 val scores = db.getAllHighScores()
                 if(scores.isEmpty()){
-                    db.insertHighScores("Lesson 3", mCorrectAnswers.toString())
+                    db.insertHighScores("Lesson 12", mCorrectAnswers.toString())
                 }else{
-                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
-                        db.updateHighScores("Lesson 3", mCorrectAnswers.toString())
+                    if (mCorrectAnswers > Integer.parseInt(scores[11].score))
+                        db.updateHighScores("Lesson 12", mCorrectAnswers.toString())
                 }
 
                 if(mCorrectAnswers >= 6) {
-                    Main.QUIZ3_PASSED = true
+                    QUIZ12_PASSED = true
                 }
                 intent.putExtra(QuestionThree.TOTAL_QUESTIONS, mQuestionList!!.size)
                 intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))

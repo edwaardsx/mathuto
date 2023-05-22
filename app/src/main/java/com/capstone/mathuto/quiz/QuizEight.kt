@@ -214,9 +214,11 @@ class QuizEight : AppCompatActivity(), View.OnClickListener {
                 val scores = db.getAllHighScores()
                 if(scores.isEmpty()){
                     db.insertHighScores("Lesson 8", mCorrectAnswers.toString())
-                }else{
-                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
+                } else if (scores.size >= 8) {
+                    val previousScore = Integer.parseInt(scores[7].score)
+                    if (mCorrectAnswers > previousScore) {
                         db.updateHighScores("Lesson 8", mCorrectAnswers.toString())
+                    }
                 }
 
                 if(mCorrectAnswers >= 6) {

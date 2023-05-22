@@ -43,64 +43,83 @@ class MainScoresActivity : AppCompatActivity() {
         }else{
             binding.scoreNoContent.visibility = View.INVISIBLE
 
+
             binding.lessonOneHighScore.text = scores[0].score
             binding.cardViewLesoonOne.visibility  = View.VISIBLE
 
-            binding.lessonTwoHighScore.text = scores[0].score
-            binding.cardViewLessonTwo.visibility  = View.VISIBLE
-
-            /*binding.lessonThreeHighScore.text = scores[0].score
-            binding.cardViewLessonThree.visibility  = View.VISIBLE
-
-            binding.lessonFourHighScore.text = scores[0].score
-            binding.cardViewLessonFour.visibility  = View.VISIBLE
-
-            binding.lessonFiveHighScore.text = scores[0].score
-            binding.cardViewLessonFive.visibility  = View.VISIBLE
-
-            binding.lessonSixHighScore.text = scores[0].score
-            binding.cardViewLessonSix.visibility  = View.VISIBLE
-
-            binding.lessonSevenHighScore.text = scores[0].score
-            binding.cardViewLessonSeven.visibility  = View.VISIBLE
-
-            binding.lessonEightHighScore.text = scores[0].score
-            binding.cardViewLessonEight.visibility  = View.VISIBLE
-
-            binding.lessonNineHighScore.text = scores[0].score
-            binding.cardViewLessonNine.visibility  = View.VISIBLE
-
-            binding.lessonTenHighScore.text = scores[0].score
-            binding.cardViewLessonTen.visibility  = View.VISIBLE
-
-            binding.lessonElevenHighScore.text = scores[0].score
-            binding.cardViewLessonEleven.visibility  = View.VISIBLE
-
-            binding.lessonTwelveHighScore.text = scores[0].score
-            binding.cardViewLessonTwelve.visibility  = View.VISIBLE
-
-            binding.lessonThirteenHighScore.text = scores[0].score
-            binding.cardViewLessonThirteen.visibility  = View.VISIBLE
-
-            binding.lessonFourteenHighScore.text = scores[0].score
-            binding.cardViewLessonFourteen.visibility  = View.VISIBLE
-
-            binding.lessonFifteenHighScore.text = scores[0].score
-            binding.cardViewLessonFifteen.visibility  = View.VISIBLE
-
-            binding.lessonSixteenHighScore.text = scores[0].score
-            binding.cardViewLessonSixteen.visibility  = View.VISIBLE
-
-            binding.lessonSeventeenHighScore.text = scores[0].score
-            binding.cardViewLessonSeventeen.visibility  = View.VISIBLE
-
-            binding.lessonEighteenHighScore.text = scores[0].score
-            binding.cardViewLessonEighteen.visibility  = View.VISIBLE
-
-            binding.lessonNineteenHighScore.text = scores[0].score
-            binding.cardViewLessonNineteen.visibility  = View.VISIBLE*/
+            if (scores.size > 1) {
+                binding.lessonTwoHighScore.text = scores[1].score
+                binding.cardViewLessonTwo.visibility = View.VISIBLE
+            }
+            if (scores.size > 2) {
+                binding.lessonThreeHighScore.text = scores[2].score
+                binding.cardViewLessonThree.visibility = View.VISIBLE
+            }
+            if (scores.size > 3) {
+                binding.lessonFourHighScore.text = scores[3].score
+                binding.cardViewLessonFour.visibility = View.VISIBLE
+            }
+            if (scores.size > 4) {
+                binding.lessonFiveHighScore.text = scores[4].score
+                binding.cardViewLessonFive.visibility = View.VISIBLE
+            }
+            if (scores.size > 5) {
+                binding.lessonSixHighScore.text = scores[5].score
+                binding.cardViewLessonSix.visibility = View.VISIBLE
+            }
+            if (scores.size > 6) {
+                binding.lessonSevenHighScore.text = scores[6].score
+                binding.cardViewLessonSeven.visibility = View.VISIBLE
+            }
+            if (scores.size > 7) {
+                binding.lessonEightHighScore.text = scores[7].score
+                binding.cardViewLessonEight.visibility = View.VISIBLE
+            }
+            if (scores.size > 8) {
+                binding.lessonNineHighScore.text = scores[8].score
+                binding.cardViewLessonNine.visibility = View.VISIBLE
+            }
+            if (scores.size > 9) {
+                binding.lessonTenHighScore.text = scores[9].score
+                binding.cardViewLessonTen.visibility = View.VISIBLE
+            }
+            if (scores.size > 10) {
+                binding.lessonElevenHighScore.text = scores[10].score
+                binding.cardViewLessonEleven.visibility = View.VISIBLE
+            }
+            if (scores.size > 11) {
+                binding.lessonTwelveHighScore.text = scores[11].score
+                binding.cardViewLessonTwelve.visibility = View.VISIBLE
+            }
+            if (scores.size > 12) {
+                binding.lessonThirteenHighScore.text = scores[12].score
+                binding.cardViewLessonThirteen.visibility = View.VISIBLE
+            }
+            if (scores.size > 13) {
+                binding.lessonFourteenHighScore.text = scores[13].score
+                binding.cardViewLessonFourteen.visibility = View.VISIBLE
+            }
+            if (scores.size > 14) {
+                binding.lessonFifteenHighScore.text = scores[14].score
+                binding.cardViewLessonFifteen.visibility = View.VISIBLE
+            }
+            if (scores.size > 15) {
+                binding.lessonSixteenHighScore.text = scores[15].score
+                binding.cardViewLessonSixteen.visibility = View.VISIBLE
+            }
+            if (scores.size > 16) {
+                binding.lessonSeventeenHighScore.text = scores[16].score
+                binding.cardViewLessonSeventeen.visibility = View.VISIBLE
+            }
+            if (scores.size > 17) {
+                binding.lessonEighteenHighScore.text = scores[17].score
+                binding.cardViewLessonEighteen.visibility = View.VISIBLE
+            }
+            if (scores.size > 18) {
+                binding.lessonNineteenHighScore.text = scores[18].score
+                binding.cardViewLessonNineteen.visibility = View.VISIBLE
+            }
         }
-
         binding.btnBack.setOnClickListener{
             finish()
         }

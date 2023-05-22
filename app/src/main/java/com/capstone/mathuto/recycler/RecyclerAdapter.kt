@@ -1,5 +1,6 @@
 package com.capstone.mathuto.recycler
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -25,12 +26,16 @@ class RecyclerAdapter (private val itemList: List<TitleData>,
         holder.titleTextView.text = titleData.title
         holder.statusTextView.text = titleData.status
 
-        if(titleData.status == ONGOING){
-            holder.lockUnlockImageView.setImageResource(R.drawable.ic_unlock)
-        }else if(titleData.status == COMPLETED){
-            holder.lockUnlockImageView.setImageResource(R.drawable.ic_check_circle)
-        }else{
-            holder.lockUnlockImageView.setImageResource(R.drawable.ic_lock)
+        when (titleData.status) {
+            ONGOING -> {
+                holder.lockUnlockImageView.setImageResource(R.drawable.ic_unlock)
+            }
+            COMPLETED -> {
+                holder.lockUnlockImageView.setImageResource(R.drawable.ic_check_circle)
+            }
+            else -> {
+                holder.lockUnlockImageView.setImageResource(R.drawable.ic_lock)
+            }
         }
         holder.itemView.setOnClickListener {
             listener.onItemClick(titleData)
@@ -45,6 +50,7 @@ class RecyclerAdapter (private val itemList: List<TitleData>,
         fun onItemClick(titleData: TitleData)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun filterItems(query: String) {
         filteredItemList = if (query.isEmpty()) {
             itemList
