@@ -119,17 +119,6 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
                 }
             }
         }
-
-        val startColor = resources.getColor(R.color.gradient_start_color, null)
-        val endColor = resources.getColor(R.color.gradient_end_color, null)
-
-        val shader: Shader = LinearGradient(
-            0f, 0f, 0f, binding.tvTitle.textSize,
-            intArrayOf(startColor, endColor),
-            null,
-            Shader.TileMode.CLAMP
-        )
-        binding.tvTitle.paint.shader = shader
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

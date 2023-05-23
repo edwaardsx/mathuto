@@ -29,7 +29,6 @@ class QuizResultSummaryActivity1 : AppCompatActivity() {
         setContentView(binding.root)
 
         mQuestionList = QuestionOne.getQuestions()
-        mQuestionList?.shuffle()
         setQuestion()
 
         binding.btnNext.setOnClickListener{
@@ -87,8 +86,9 @@ class QuizResultSummaryActivity1 : AppCompatActivity() {
     private fun setQuestion() {
         defaultOptionView()
 
-        val bundle = intent.extras
-        val myIntArray = bundle!!.getIntegerArrayList(QuestionOne.SELECTED_ANSWERS)
+        /*val bundle = intent.extras
+        val myIntArray = bundle?.getIntegerArrayList(QuestionOne.SELECTED_ANSWERS)*/
+        val myIntArray = intent.getIntegerArrayListExtra(QuestionOne.SELECTED_ANSWERS)
 
         if (mCurrentPosition < mQuestionList!!.size) {
             val question: Question = mQuestionList!![mCurrentPosition - 1]

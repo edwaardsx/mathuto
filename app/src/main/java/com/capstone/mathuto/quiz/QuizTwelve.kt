@@ -212,7 +212,7 @@ class QuizTwelve : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(QuestionThree.CORRECT_ANS, mCorrectAnswers)
 
                 val scores = db.getAllHighScores()
-                if(scores.isEmpty()){
+                if (scores.size == 11) {
                     db.insertHighScores("Lesson 12", mCorrectAnswers.toString())
                 }else{
                     if (mCorrectAnswers > Integer.parseInt(scores[11].score))

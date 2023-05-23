@@ -190,7 +190,7 @@ class QuizSix : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
                 val scores = db.getAllHighScores()
-                if(scores.isEmpty()){
+                if (scores.size == 5) {
                     db.insertHighScores("Lesson 6", mCorrectAnswers.toString())
                 } else if (scores.size >= 6) {
                     val previousScore = Integer.parseInt(scores[5].score)

@@ -188,7 +188,7 @@ class QuizNineteen : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
                 val scores = db.getAllHighScores()
-                if(scores.isEmpty()){
+                if (scores.size == 18) {
                     db.insertHighScores("Lesson 19", mCorrectAnswers.toString())
                 } else if (scores.size >= 19) {
                     val previousScore = Integer.parseInt(scores[18].score)

@@ -31,7 +31,6 @@ class QuizResultSummaryActivity6 : AppCompatActivity() {
         setContentView(binding.root)
 
         mQuestionList = QuestionSix.getQuestions()
-        mQuestionList?.shuffle()
         setQuestion()
 
         binding.btnNext.setOnClickListener{

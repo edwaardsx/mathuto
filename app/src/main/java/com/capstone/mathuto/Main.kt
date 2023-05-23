@@ -2,9 +2,12 @@ package com.capstone.mathuto
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.LinearGradient
+import android.graphics.Shader
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +18,7 @@ import com.capstone.mathuto.recycler.RecyclerAdapter
 import com.capstone.mathuto.recycler.TitleData
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
+import java.util.*
 
 class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
 
@@ -55,12 +59,12 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
                     ONGOING
                 ),
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-            if(QUIZ1_PASSED && WATCHED_TUTORIAL1)
+            if(QUIZ2_PASSED && WATCHED_TUTORIAL2)
                 TitleData("Lesson 2",
                     "Problem Solving Involving Addition and Subtraction of Fractions",
                     ONGOING
                 )
-            else if (QUIZ2_PASSED && WATCHED_TUTORIAL2)
+            else if(QUIZ1_PASSED && WATCHED_TUTORIAL1)
                 TitleData("Lesson 2",
                     "Problem Solving Involving Addition and Subtraction of Fractions",
                     COMPLETED
@@ -76,7 +80,7 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
                     "Multiplication of Simple Fractions and Mixed Fractions",
                     ONGOING
                 )
-            else if (QUIZ3_PASSED && WATCHED_TUTORIAL3)
+            else if(QUIZ3_PASSED && WATCHED_TUTORIAL3)
                 TitleData("Lesson 3",
                     "Multiplication of Simple Fractions and Mixed Fractions",
                     COMPLETED
@@ -188,7 +192,7 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
                     "Multiplication of Decimals and Mixed Decimals Mentally by 0.1, 0.01, 10 and 100",
                     ONGOING
                 )
-            else if (QUIZ10_PASSED && WATCHED_TUTORIAL10)
+            else if (QUIZ8_PASSED && WATCHED_TUTORIAL8)
                 TitleData("Lesson 10",
                     "Multiplication of Decimals and Mixed Decimals Mentally by 0.1, 0.01, 10 and 100",
                     COMPLETED
@@ -199,23 +203,7 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
                     LOCK
                 ),
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-            if(QUIZ9_PASSED && WATCHED_TUTORIAL9)
-                TitleData("Lesson 10",
-                    "Multiplication of Decimals and Mixed Decimals Mentally by 0.1, 0.01, 10 and 100",
-                    ONGOING
-                )
-            else if (QUIZ10_PASSED && WATCHED_TUTORIAL10)
-                TitleData("Lesson 10",
-                    "Multiplication of Decimals and Mixed Decimals Mentally by 0.1, 0.01, 10 and 100",
-                    COMPLETED
-                )
-            else
-                TitleData("Lesson 10",
-                    "Multiplication of Decimals and Mixed Decimals Mentally by 0.1, 0.01, 10 and 100",
-                    LOCK
-                ),
-////////////////////////////////////////////////////////////////////////////////////////////////////
-            if(QUIZ10_PASSED && WATCHED_TUTORIAL10)
+            if (QUIZ10_PASSED && WATCHED_TUTORIAL10)
                 TitleData("Lesson 11",
                     "Problem-Solving on Multiplication of Decimals",
                     ONGOING
@@ -364,6 +352,7 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
 
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
+
     }
 
     override fun onItemClick(titleData: TitleData) {
@@ -628,6 +617,6 @@ class Main : AppCompatActivity(), RecyclerAdapter.OnItemClickListener {
 
         const val COMPLETED: String = "Complete"
         const val LOCK: String = "Lock"
-        const val ONGOING: String = "In progress"
+        const val ONGOING: String = "OnGoing"
     }
 }

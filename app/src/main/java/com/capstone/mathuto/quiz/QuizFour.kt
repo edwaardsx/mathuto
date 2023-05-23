@@ -188,7 +188,7 @@ class QuizFour : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
                 val scores = db.getAllHighScores()
-                if(scores.isEmpty()){
+                if (scores.size == 3) {
                     db.insertHighScores("Lesson 4", mCorrectAnswers.toString())
                 } else if (scores.size >= 4) {
                     val previousScore = Integer.parseInt(scores[3].score)
