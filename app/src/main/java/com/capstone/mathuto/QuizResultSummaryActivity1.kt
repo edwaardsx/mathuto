@@ -86,8 +86,6 @@ class QuizResultSummaryActivity1 : AppCompatActivity() {
     private fun setQuestion() {
         defaultOptionView()
 
-        /*val bundle = intent.extras
-        val myIntArray = bundle?.getIntegerArrayList(QuestionOne.SELECTED_ANSWERS)*/
         val myIntArray = intent.getIntegerArrayListExtra(QuestionOne.SELECTED_ANSWERS)
 
         if (mCurrentPosition < mQuestionList!!.size) {

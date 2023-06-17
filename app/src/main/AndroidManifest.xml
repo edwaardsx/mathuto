@@ -15,14 +15,9 @@
         android:theme="@style/Theme.Mathuto"
         tools:targetApi="31">
 
-
-
         <activity
             android:name=".MainScoresActivity"
             android:exported="false" />
-
-
-
         <activity
             android:name=".QuizResultSummaryActivity1"
             android:exported="false" />
@@ -147,10 +142,6 @@
         <activity
             android:name=".watch.ModuleOne"
             android:exported="false" />
-
-
-
-
         <activity
             android:name=".quiz.QuizOne"
             android:exported="false" />
@@ -205,9 +196,6 @@
         <activity
             android:name=".quiz.QuizNineteen"
             android:exported="false" />
-
-
-
         <activity
             android:name=".quiz.QuizResult1"
             android:exported="false" />
@@ -265,9 +253,6 @@
         <activity
             android:name=".quiz.QuizResult19"
             android:exported="false" />
-
-
-
         <activity
             android:name=".timer.QuizTimer1"
             android:exported="false" />
@@ -325,10 +310,6 @@
         <activity
             android:name=".timer.QuizTimer19"
             android:exported="false" />
-
-
-
-
         <activity
             android:name=".lessons.Lesson1"
             android:exported="false" />
@@ -386,11 +367,6 @@
         <activity
             android:name=".lessons.Lesson19"
             android:exported="false" />
-
-
-
-
-
         <activity
             android:name=".menu.IntroductoryMessage"
             android:exported="false" />
@@ -400,9 +376,6 @@
         <activity
             android:name=".menu.DevelopmentTeam"
             android:exported="false" />
-
-
-
         <activity
             android:name=".About"
             android:exported="false" />

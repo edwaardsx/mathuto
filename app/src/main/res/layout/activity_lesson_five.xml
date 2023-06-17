@@ -143,13 +143,15 @@
                         android:background="@color/light_gray"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"/>
+
                     <TextView
                         android:id="@+id/tv_lessons_description_two"
-                        android:layout_marginTop="10dp"
-                        android:text="Do you know how to multiply fractions? Let us try to find out if you can do it by answering the problem and showing your solutions in the indicated ways or methods below."
-                        android:fontFamily="@font/poppins_regular"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Do you know how to multiply fractions? Let us try to find out if you can do it by answering the problem and showing your solutions in the indicated ways or methods below." />
+
                     <TextView
                         android:id="@+id/tv_lessons_description_three"
                         android:layout_marginTop="10dp"

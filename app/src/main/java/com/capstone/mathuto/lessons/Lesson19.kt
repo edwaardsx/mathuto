@@ -57,7 +57,7 @@ class Lesson19 : AppCompatActivity(), TextToSpeech.OnInitListener {
             overridePendingTransition(0, 0)
         }
         binding.btnStartQuiz.setOnClickListener {
-            val intent = Intent(applicationContext, QuizTimer19::class.java)
+            val intent = Intent(applicationContext, com.capstone.mathuto.timer.QuizTimer19::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)

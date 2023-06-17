@@ -20,7 +20,6 @@ import com.capstone.mathuto.databinding.ActivityLessonOneBinding
 import com.capstone.mathuto.menu.DevelopmentTeam
 import com.capstone.mathuto.menu.IntroductoryMessage
 import com.capstone.mathuto.menu.TableOfContents
-import com.capstone.mathuto.timer.QuizTimer1
 import com.capstone.mathuto.watch.ModuleOne
 import java.util.*
 
@@ -50,7 +49,7 @@ class Lesson1 : AppCompatActivity(), TextToSpeech.OnInitListener {
             overridePendingTransition(0, 0)
         }
         binding.btnStartQuiz.setOnClickListener {
-            val intent = Intent(applicationContext, QuizTimer1::class.java)
+            val intent = Intent(applicationContext, com.capstone.mathuto.timer.QuizTimer1::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)

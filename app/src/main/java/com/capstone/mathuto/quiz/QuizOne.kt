@@ -219,8 +219,7 @@ class QuizOne : AppCompatActivity(), View.OnClickListener {
                     if (mCorrectAnswers > Integer.parseInt(scores[0].score))
                         db.updateHighScores("Lesson 1", mCorrectAnswers.toString())
                 }
-
-                if(mCorrectAnswers >= 6) {
+                if(mCorrectAnswers >= 5) {
                     QUIZ1_PASSED = true
                 }
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
